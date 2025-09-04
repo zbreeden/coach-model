@@ -1,6 +1,124 @@
-const MODULE = {
-  name: "The Coach (RoutineIQ)",
-  emoji: "💪",
-  repoUser: "zbreeden",
-  repoName: "coach-model"
-};
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- The Coach (RoutineIQ) — friendly intro / landing page -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>💪 The Coach — RoutineIQ</title>
+  <meta name="description" content="RoutineIQ: fitness & habit engine for daily training, logging, and progress." />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Google Tag Manager (optional; keep if you use GTM) -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WVC4SNLB'); /* ← your GTM ID */
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root {
+      --bg:        Canvas;
+      --text:      CanvasText;
+      --muted:     color-mix(in oklab, var(--text) 50%, transparent);
+      --card:      color-mix(in oklab, var(--bg) 95%, var(--text) 5%);
+      --accent:    color-mix(in oklab, #3a86ff 65%, #7c3aed 35%);
+      --accent-2:  color-mix(in oklab, #22c55e 55%, #3b82f6 45%);
+      --border:    color-mix(in oklab, var(--text) 12%, transparent);
+      --shadow:    0 10px 30px color-mix(in oklab, var(--text) 10%, transparent);
+      --radius:    18px;
+      --pad:       16px;
+      --gap:       18px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 500 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 0% -10%, color-mix(in oklab, var(--accent) 10%, transparent), transparent) no-repeat,
+                  radial-gradient(900px 500px at 100% 110%, color-mix(in oklab, var(--accent-2) 12%, transparent), transparent) no-repeat,
+                  var(--bg);
+      color: var(--text);
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+    header {
+      display: flex; align-items: center; justify-content: space-between; gap: var(--gap);
+      margin-bottom: 20px;
+    }
+    .title {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .title .emoji { font-size: 36px; }
+    .title h1 { font-size: 26px; margin: 0; letter-spacing: 0.2px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 12px; opacity: 0.9;
+      background: color-mix(in oklab, var(--bg) 85%, var(--text) 15%);
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(18px, 4vw, 28px);
+      box-shadow: var(--shadow);
+    }
+    .hero p { margin: 0.25rem 0 0; color: var(--muted); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    a.button, button.button {
+      appearance: none; border: 1px solid var(--border); background: #fff0;
+      padding: 10px 14px; border-radius: 12px; cursor: pointer;
+      text-decoration: none; color: inherit; font-weight: 600;
+      transition: transform .06s ease, border-color .2s ease, background-color .2s ease;
+      backdrop-filter: saturate(120%);
+    }
+    a.button:hover, button.button:hover { transform: translateY(-1px); border-color: color-mix(in oklab, var(--accent) 40%, var(--border)); }
+    a.primary, button.primary {
+      background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 65%, transparent), color-mix(in oklab, var(--accent-2) 50%, transparent));
+      color: white; border: none;
+    }
+
+    .grid { display: grid; gap: var(--gap); margin: 22px 0; grid-template-columns: repeat(12, 1fr); }
+    .card {
+      grid-column: span 12;
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: var(--pad); box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 4px 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); font-size: 14px; }
+
+    @media (min-width: 840px) {
+      .card.span-6 { grid-column: span 6; }
+      .card.span-4 { grid-column: span 4; }
+    }
+
+    .row { display: grid; gap: 10px; grid-template-columns: repeat(12, 1fr); align-items: center; }
+    .row > label { grid-column: span 4; }
+    .row > input, .row > select, .row > textarea { grid-column: span 8; width: 100%; padding: 10px; border-radius: 10px; border: 1px solid var(--border); background: #fff0; color: inherit; }
+    .row > textarea { min-height: 78px; resize: vertical; }
+
+    .checklist { display: grid; gap: 10px; }
+    .check-item { display: flex; align-items: center; gap: 10px; }
+    .check-item input { width: 18px; height: 18px; }
+
+    .back-fab {
+      position: fixed; left: 18px; bottom: 18px; z-index: 8;
+      padding: 10px 14px; border-radius: 999px;
+      background: var(--card); border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    footer { margin: 22px 0 10px; color: var(--muted); font-size: 13px; text-align: center; }
+    code.inline { padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); background: color-mix(in oklab, var(--bg) 92%, var(--text) 8%); }
+  </style>
+</head>
+
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVC4SNLB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <a id="backFab" class="button back-fab" href="https://zbreeden.github.io/FourTwentyAnalytics/"
