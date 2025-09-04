@@ -1,0 +1,12 @@
+- key: routineiq
+  term: "RoutineIQ (The Coach)"
+  definition: >
+    Fitness and habit module that structures workouts, routines, and recovery
+    into trackable, comparable sessions for steady improvement.
+    Acts as the coaching layer in the constellation, integrating signals, goals,
+    and progress logs to adapt plans over time.
+  examples:
+    - "Open the RoutineIQ dashboard to review today's plan."
+    - "Log strength session: 5x5 bench, RPE 8, 45 min."
+    - "Trigger habit_completed event to GA4 for streak tracking."
+  see_also: ["routine", "fitness", "habit", "progress_log", "signal", "grower"]
