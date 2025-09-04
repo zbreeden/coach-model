@@ -121,4 +121,220 @@
   <!-- GTM (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVC4SNLB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <a id="backFab" class="button back-fab" href="https://zbreeden.github.io/FourTwentyAnalytics/"
+  <a id="backFab" class="button back-fab" href="https://zbreeden.github.io/FourTwentyAnalytics/" rel="noopener">← Back to Hub</a>
+
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <div class="emoji" aria-hidden="true">💪</div>
+        <div>
+          <h1>The Coach <span class="muted">(RoutineIQ)</span></h1>
+          <div class="badges">
+            <span class="badge">Module</span>
+            <span class="badge">Status: Alpha</span>
+            <span class="badge">Emoji: 💪</span>
+          </div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge" id="nowBadge">—</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <strong>Your daily fitness & habit engine.</strong>
+      <p>Plan, log, and review sessions. Keep streaks alive. Iterate on small wins.</p>
+
+      <div class="actions">
+        <a class="button" href="https://zbreeden.github.io/FourTwentyAnalytics/" rel="noopener" id="backTop">← Back to Hub</a>
+        <a class="button" id="readmeBtn" href="#" rel="noopener">Open README</a>
+        <a class="button" id="repoBtn" href="#" rel="noopener">View Repo</a>
+        <button class="button primary" id="jumpCheckin">Start Daily Check-in</button>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- Quick Log -->
+      <div class="card span-6">
+        <h3>Quick Log</h3>
+        <div class="muted">Fast entry for a session—stores locally and emits an analytics event.</div>
+        <div class="row" style="margin-top:10px">
+          <label for="type">Type</label>
+          <select id="type">
+            <option>Strength</option>
+            <option>Cardio</option>
+            <option>Mobility</option>
+            <option>Recovery</option>
+          </select>
+
+          <label for="duration">Duration (min)</label>
+          <input id="duration" type="number" min="0" inputmode="numeric" placeholder="45" />
+
+          <label for="rpe">Intensity (RPE 1–10)</label>
+          <input id="rpe" type="number" min="1" max="10" inputmode="numeric" placeholder="7" />
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" placeholder="e.g., 5x5 bench @ 185, felt strong"></textarea>
+        </div>
+        <div class="actions" style="margin-top:12px">
+          <button class="button primary" id="logBtn">Log Session</button>
+          <button class="button" id="clearBtn">Clear</button>
+        </div>
+        <div class="muted" id="logStatus" style="margin-top:10px"></div>
+      </div>
+
+      <!-- Today's Checklist -->
+      <div class="card span-6" id="checkin">
+        <h3>Today’s Checklist</h3>
+        <div class="muted">Tick items as you go—persists in your browser.</div>
+        <div class="checklist" style="margin-top:10px">
+          <label class="check-item"><input type="checkbox" data-key="warmup" /> Warm-up</label>
+          <label class="check-item"><input type="checkbox" data-key="main" /> Main sets</label>
+          <label class="check-item"><input type="checkbox" data-key="cooldown" /> Cool-down</label>
+          <label class="check-item"><input type="checkbox" data-key="hydrate" /> Hydrate</label>
+        </div>
+        <div class="actions" style="margin-top:12px">
+          <button class="button" id="resetChecklist">Reset</button>
+        </div>
+      </div>
+
+      <!-- README render (optional) -->
+      <div class="card span-12" id="readmePanel">
+        <h3>Module README</h3>
+        <div class="muted">Auto-rendered from the repo. If not found, use the button above to open it on GitHub.</div>
+        <div id="readmeContent" style="margin-top:10px; white-space:pre-wrap; overflow:auto;"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div>Part of the FourTwenty Analytics constellation • <code class="inline">seeds/glossary.yml → key: routineiq</code></div>
+    </footer>
+  </div>
+
+  <script>
+    // ── Config (update repoName if different) ────────────────────────────────
+    const MODULE = {
+      name: "The Coach (RoutineIQ)",
+      emoji: "💪",
+      repoUser: "zbreeden",
+      repoName: "coach-model",
+      branch:   "main",
+      hubUrl:   "https://zbreeden.github.io/FourTwentyAnalytics/"
+    };
+
+    // ── Analytics hooks (dataLayer only; GTM recommended) ───────────────────
+    window.dataLayer = window.dataLayer || [];
+    function track(event, params = {}) {
+      window.dataLayer.push({ event, ts: Date.now(), module: "routineiq", ...params });
+    }
+    function signalNavClick(action, label, where) {
+      track("nav_click", { action, label, where });
+    }
+
+    // ── Clock badge ─────────────────────────────────────────────────────────
+    function tickNow() {
+      const el = document.getElementById("nowBadge");
+      if (!el) return;
+      const now = new Date();
+      const hh = now.getHours().toString().padStart(2, "0");
+      const mm = now.getMinutes().toString().padStart(2, "0");
+      el.textContent = `Local time ${hh}:${mm}`;
+    }
+    tickNow(); setInterval(tickNow, 30_000);
+
+    // ── Buttons wiring ──────────────────────────────────────────────────────
+    document.getElementById("backTop").addEventListener("click", () => {
+      signalNavClick("back_to_hub", "Back (top)", "index");
+    });
+    document.getElementById("backFab").addEventListener("click", () => {
+      signalNavClick("back_to_hub", "Back (fab)", "index");
+    });
+
+    // Populate repo / README links; safe even if repo not yet created.
+    const BASE_REPO = `https://github.com/${MODULE.repoUser}/${MODULE.repoName}`;
+    const RAW_README = `https://raw.githubusercontent.com/${MODULE.repoUser}/${MODULE.repoName}/${MODULE.branch}/README.md`;
+    const readmeBtn = document.getElementById("readmeBtn");
+    const repoBtn   = document.getElementById("repoBtn");
+    readmeBtn.href  = `${BASE_REPO}/blob/${MODULE.branch}/README.md`;
+    repoBtn.href    = BASE_REPO;
+
+    readmeBtn.addEventListener("click", () => signalNavClick("open_readme", "README.md", "index"));
+    repoBtn.addEventListener("click",   () => signalNavClick("open_repo", "GitHub Repo", "index"));
+
+    // ── Jump to check-in ────────────────────────────────────────────────────
+    document.getElementById("jumpCheckin").addEventListener("click", () => {
+      document.getElementById("checkin").scrollIntoView({ behavior: "smooth", block: "start" });
+      track("cta_checkin", { from: "hero" });
+    });
+
+    // ── Quick Log (local storage only) ──────────────────────────────────────
+    const $ = (id) => document.getElementById(id);
+    const LOG_KEY = "routineiq_last_log";
+    function setStatus(msg) { $("logStatus").textContent = msg; }
+
+    $("logBtn").addEventListener("click", () => {
+      const payload = {
+        type: $("type").value,
+        duration_min: parseInt($("duration").value || "0", 10),
+        rpe: parseInt($("rpe").value || "0", 10),
+        notes: $("notes").value.trim(),
+        at: new Date().toISOString()
+      };
+      localStorage.setItem(LOG_KEY, JSON.stringify(payload));
+      setStatus("Logged locally. (Emitted event: quick_log_submitted)");
+      track("quick_log_submitted", payload);
+    });
+
+    $("clearBtn").addEventListener("click", () => {
+      $("duration").value = "";
+      $("rpe").value = "";
+      $("notes").value = "";
+      setStatus("Cleared form.");
+      track("quick_log_cleared");
+    });
+
+    // Restore last log, if any
+    try {
+      const last = JSON.parse(localStorage.getItem(LOG_KEY) || "null");
+      if (last) {
+        $("type").value = last.type || "Strength";
+        $("duration").value = last.duration_min || "";
+        $("rpe").value = last.rpe || "";
+        $("notes").value = last.notes || "";
+        setStatus("Restored last log from this browser.");
+      }
+    } catch {}
+
+    // ── Checklist (persist checkboxes) ──────────────────────────────────────
+    const CHECK_KEY = "routineiq_checklist";
+    const state = JSON.parse(localStorage.getItem(CHECK_KEY) || "{}");
+    document.querySelectorAll(".check-item input").forEach(cb => {
+      const key = cb.dataset.key;
+      cb.checked = !!state[key];
+      cb.addEventListener("change", () => {
+        state[key] = cb.checked;
+        localStorage.setItem(CHECK_KEY, JSON.stringify(state));
+        track("checklist_toggle", { key, value: cb.checked });
+      });
+    });
+    $("resetChecklist").addEventListener("click", () => {
+      document.querySelectorAll(".check-item input").forEach(cb => cb.checked = false);
+      localStorage.removeItem(CHECK_KEY);
+      track("checklist_reset");
+    });
+
+    // ── README auto-render (graceful if repo/README missing) ────────────────
+    (async function renderReadme() {
+      const el = $("readmeContent");
+      try {
+        const res = await fetch(RAW_README, { cache: "no-store" });
+        if (!res.ok) { el.textContent = "README.md not found (yet). Use the button above to open it on GitHub."; return; }
+        const text = await res.text();
+        el.textContent = text;
+      } catch (e) {
+        el.textContent = "Could not load README. Network or CORS issue.";
+      }
+    })();
+  </script>
+</body>
+</html>
