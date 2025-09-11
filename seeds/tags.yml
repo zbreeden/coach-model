@@ -1,8 +1,0 @@
-- key: routineiq
-  label: "RoutineIQ"
-  description: >
-    Fitness and habit module (“The Coach”) focused on routines,
-    progress tracking, and optimization.
-  kind: module
-  gloss_ref: ["routine", "fitness", "habit"]
-  deprecated: false
