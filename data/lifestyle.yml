@@ -1,0 +1,27 @@
+# seeds/lifestyle.yml
+title: "Lifestyle Scroll"
+description: >
+  Unified daily system for The Coach 💪.
+  Combines the Daily Workout Scroll and Intermittent Fasting Scroll
+  into a sustainable long-term practice for health, fitness, and balance.
+
+anchors:
+  - name: "Daily Walk"
+    ref: "seeds/daily_workout.yml"
+    note: "4-mile walk + strength/core rotation (75–120 min total)."
+
+  - name: "Eating Window"
+    ref: "seeds/intermittent_fasting.yml"
+    note: "18:6 intermittent fasting (2pm–8pm eating window)."
+
+principles:
+  - "Consistency > intensity — daily habits compound over time."
+  - "Low strain, high sustainability — built to last at any age."
+  - "Flexibility — workouts may shift morning/evening, IF window may slide ±1 hr."
+  - "Enjoyment — walking outdoors and eating foods you love are part of the scroll."
+  - "Patience — visible results may take weeks, but long-term effects outweigh short-term pushes."
+
+notes:
+  - "Scrolls are modular: Workout and IF can be run separately, but are strongest when unified."
+  - "This system creates a ~500–600 calorie daily buffer while reinforcing healthy eating patterns."
+  - "Designed as a lifestyle shift, not a temporary program."
