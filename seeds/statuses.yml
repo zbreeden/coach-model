@@ -157,3 +157,27 @@
   criteria: ["eol_announcement", "replacement_or_migration_path", "target_eol_date"]
   allowed_next: ["fired", "paused"]
 
+# --- Daily Scroll Statuses for The Coach 💪 ---
+- id: done
+  label: "Done"
+  emoji: "✅"
+  order: 200
+  meaning: "Scroll completed as written."
+  criteria: ["all_anchor_met", "all_blocks_completed"]
+  allowed_next: ["skipped", "swapped"]
+
+- id: swapped
+  label: "Swapped"
+  emoji: "🔁"
+  order: 210
+  meaning: "Scroll modified — exercises or eating window adjusted, but effort kept."
+  criteria: ["anchor_met", "alternate_block_used"]
+  allowed_next: ["done", "skipped"]
+
+- id: skipped
+  label: "Skipped"
+  emoji: "💤"
+  order: 220
+  meaning: "Scroll missed for the day."
+  criteria: ["anchor_not_met", "routine_not_done"]
+  allowed_next: ["done"]
