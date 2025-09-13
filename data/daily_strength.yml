@@ -67,6 +67,17 @@ execution_cues:
   - "Stop 0–1 reps from true form breakdown; log failure point."
   - "Shake out tension post-session; light stretch 3–5 min."
 
+artifacts:
+  purpose: "Optional proofs for form, adherence, and habit streaks."
+  sources:
+    - "Short clip (5–10s) of one key movement"
+    - "Photo of dumbbell setup or rep counter screenshot"
+    - "Quick note on loads/reps-to-failure"
+  fields:
+    - artifact_url
+    - artifact_image
+    - artifact_caption
+
 status_markers:
   done: "✅ Completed as structured."
   swapped: "🔁 Modified movements/counts but completed ~30 min."
@@ -81,3 +92,6 @@ log_fields:
   - total_time_min
   - perceived_exertion_1_10
   - status
+  - artifact_url
+  - artifact_image
+  - artifact_caption
