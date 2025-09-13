@@ -1,27 +1,60 @@
-# seeds/lifestyle.yml
+# data/lifestyle.yml
 title: "Lifestyle Scroll"
 description: >
-  Unified daily system for The Coach 💪.
-  Combines the Daily Workout Scroll and Intermittent Fasting Scroll
-  into a sustainable long-term practice for health, fitness, and balance.
+  Unified daily system for The Coach 💪. Combines Cardio (morning walk),
+  Strength & Mobility (evening mix-and-match), and Intermittent Fasting (2pm–8pm).
+  Designed to be low-strain, sustainable, and habit-first.
 
 anchors:
-  - name: "Daily Walk"
-    ref: "seeds/daily_workout.yml"
-    note: "4-mile walk + strength/core rotation (75–120 min total)."
+  - name: "Morning Cardio"
+    ref: "data/daily_cardio.yml"
+    note: "3-mile walk (75–80 min) → shower → start day."
+  - name: "Evening Strength & Mobility"
+    ref: "data/daily_strength.yml"
+    note: "~30 min; 1–3 dumbbell moves to failure + 3–5 core/lower bodyweight."
+  - name: "Intermittent Fasting"
+    ref: "data/intermittent_fasting.yml"
+    note: "18:6 (eat 14:00–20:00), flexible ±1 hr when needed."
 
-  - name: "Eating Window"
-    ref: "seeds/intermittent_fasting.yml"
-    note: "18:6 intermittent fasting (2pm–8pm eating window)."
+status_markers:
+  done: "✅ All three anchors met."
+  swapped: "🔁 One or more anchors adjusted but day retained intent."
+  skipped: "💤 One or more anchors missed."
+
+rollup_rules:
+  - "Lifestyle DONE when: Cardio.status in [✅, 🔁] AND Strength.status in [✅, 🔁] AND IF.status in [✅, 🔁]"
+  - "Lifestyle SWAPPED when: ≥1 anchor is 🔁 and none are 💤"
+  - "Lifestyle SKIPPED when: any anchor is 💤"
+
+artifacts:
+  purpose: "Collect proofs from constituent scrolls for a single daily timeline."
+  aggregate_fields:
+    - cardio_artifact_url
+    - cardio_artifact_image
+    - strength_artifact_url
+    - strength_artifact_image
+    - if_artifact_url
+    - if_artifact_image
+  notes:
+    - "When present, artifacts are surfaced in daily dashboards and monthly summaries."
+
+log_fields:
+  - date
+  - cardio_status
+  - strength_status
+  - if_status
+  - lifestyle_status
+  - cardio_artifact_url
+  - cardio_artifact_image
+  - strength_artifact_url
+  - strength_artifact_image
+  - if_artifact_url
+  - if_artifact_image
+  - notes
 
 principles:
-  - "Consistency > intensity — daily habits compound over time."
-  - "Low strain, high sustainability — built to last at any age."
-  - "Flexibility — workouts may shift morning/evening, IF window may slide ±1 hr."
-  - "Enjoyment — walking outdoors and eating foods you love are part of the scroll."
-  - "Patience — visible results may take weeks, but long-term effects outweigh short-term pushes."
-
-notes:
-  - "Scrolls are modular: Workout and IF can be run separately, but are strongest when unified."
-  - "This system creates a ~500–600 calorie daily buffer while reinforcing healthy eating patterns."
-  - "Designed as a lifestyle shift, not a temporary program."
+  - "Consistency > intensity — habits compound."
+  - "Low strain, high sustainability — built to last."
+  - "Flexibility — timing can shift; intent remains."
+  - "Enjoyment — walking outside, food you love, simple strength."
+  - "Patience — long-term outcomes beat short-term pushes."
