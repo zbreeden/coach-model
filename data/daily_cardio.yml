@@ -1,0 +1,33 @@
+# data/daily_cardio.yml
+title: "Daily Cardio Scroll"
+description: >
+  Daily 3-mile walk as the morning anchor. Typical duration 75–80 min.
+  Ideally precedes shower routine to start the day clear and focused.
+
+intent:
+  cadence: "daily"
+  preferred_time: "morning"
+  after_action: "shower_routine"
+
+session:
+  target_distance_miles: 3
+  typical_duration_min: [75, 80]
+  intensity: "low_to_moderate"
+  terrain: "flexible (neighborhood/park/treadmill)"
+  notes:
+    - "Hydrate before/after."
+    - "Comfortable pace; conversation-capable breathing."
+    - "Inclement weather fallback: treadmill or mall walk."
+
+status_markers:
+  done: "✅ Completed 3 miles."
+  swapped: "🔁 Altered (distance/time/indoor swap) but walked."
+  skipped: "💤 Missed today."
+
+log_fields:
+  - date
+  - distance_miles
+  - duration_min
+  - route_or_mode
+  - perceived_exertion_1_10
+  - status
