@@ -19,6 +19,17 @@ session:
     - "Comfortable pace; conversation-capable breathing."
     - "Inclement weather fallback: treadmill or mall walk."
 
+artifacts:
+  purpose: "Optional proofs of completion for accountability and dashboards."
+  sources:
+    - "Pacer share link (preferred)"
+    - "Route map image or thumbnail"
+    - "Short note (weather, shoes, surface)"
+  fields:
+    - artifact_url
+    - artifact_image
+    - artifact_caption
+
 status_markers:
   done: "✅ Completed 3 miles."
   swapped: "🔁 Altered (distance/time/indoor swap) but walked."
@@ -31,3 +42,6 @@ log_fields:
   - route_or_mode
   - perceived_exertion_1_10
   - status
+  - artifact_url
+  - artifact_image
+  - artifact_caption
