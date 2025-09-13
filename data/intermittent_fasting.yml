@@ -1,0 +1,25 @@
+# seeds/intermittent_fasting.yml
+title: "Intermittent Fasting Scroll"
+description: >
+  Eating window from 2pm–8pm daily (18:6 schedule).
+  Designed to complement the Daily Workout Scroll 💪.
+  Focuses on calorie control, fat utilization, and sustainability.
+
+schedule:
+  fasting_window:
+    start: "20:00"
+    end: "14:00"
+    note: "No calories. Hydrate with water, black coffee, or unsweetened tea."
+  eating_window:
+    start: "14:00"
+    end: "20:00"
+    guidelines:
+      - "Aim for 2 balanced meals + optional light snack."
+      - "Prioritize protein (muscle support for strength scroll)."
+      - "Include fiber and healthy fats for satiety."
+      - "Avoid liquid calories outside eating window."
+  notes:
+    - "Initial adaptation may include hunger or fatigue (first 1–2 weeks)."
+    - "Pairing with the Daily Workout Scroll accelerates fat utilization."
+    - "Stay flexible: shift eating window ±1 hour if needed for life balance."
+    - "Consistency > perfection. One-off adjustments won’t derail progress."
