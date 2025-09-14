@@ -1,8 +1,9 @@
 # data/lifestyle.yml
 title: "Lifestyle Scroll"
 description: >
-  Unified daily system for The Coach 💪. Combines Cardio (morning walk),
-  Strength & Mobility (evening mix-and-match), and Intermittent Fasting (2pm–8pm).
+  Unified daily system for The Coach 💪.
+  Anchors: Morning Cardio (3-mile walk), Evening Strength & Mobility (~30 min),
+  Intermittent Fasting (2pm–8pm), and Journaling (15 min).
   Designed to be low-strain, sustainable, and habit-first.
 
 anchors:
@@ -15,19 +16,22 @@ anchors:
   - name: "Intermittent Fasting"
     ref: "data/intermittent_fasting.yml"
     note: "18:6 (eat 14:00–20:00), flexible ±1 hr when needed."
+  - name: "Journaling & Story"
+    ref: "data/journaling.yml"
+    note: "15 min reflection/creative seed; capture one highlight line."
 
 status_markers:
-  done: "✅ All three anchors met."
-  swapped: "🔁 One or more anchors adjusted but day retained intent."
+  done: "✅ All four anchors met."
+  swapped: "🔁 One or more anchors adjusted but intent held."
   skipped: "💤 One or more anchors missed."
 
 rollup_rules:
-  - "Lifestyle DONE when: Cardio.status in [✅, 🔁] AND Strength.status in [✅, 🔁] AND IF.status in [✅, 🔁]"
-  - "Lifestyle SWAPPED when: ≥1 anchor is 🔁 and none are 💤"
-  - "Lifestyle SKIPPED when: any anchor is 💤"
+  - "Lifestyle DONE when: Cardio, Strength, IF, and Journaling are each in [✅, 🔁]."
+  - "Lifestyle SWAPPED when: ≥1 anchor is 🔁 and none are 💤."
+  - "Lifestyle SKIPPED when: any anchor is 💤."
 
 artifacts:
-  purpose: "Collect proofs from constituent scrolls for a single daily timeline."
+  purpose: "Collect proofs from all four anchors for a single daily timeline."
   aggregate_fields:
     - cardio_artifact_url
     - cardio_artifact_image
@@ -35,14 +39,17 @@ artifacts:
     - strength_artifact_image
     - if_artifact_url
     - if_artifact_image
+    - journaling_artifact_url
+    - journaling_artifact_image
   notes:
-    - "When present, artifacts are surfaced in daily dashboards and monthly summaries."
+    - "Artifacts surface in daily dashboards and monthly summaries when present."
 
 log_fields:
   - date
   - cardio_status
   - strength_status
   - if_status
+  - journaling_status
   - lifestyle_status
   - cardio_artifact_url
   - cardio_artifact_image
@@ -50,6 +57,8 @@ log_fields:
   - strength_artifact_image
   - if_artifact_url
   - if_artifact_image
+  - journaling_artifact_url
+  - journaling_artifact_image
   - notes
 
 principles:
