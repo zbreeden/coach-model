@@ -1,0 +1,87 @@
+# data/journaling.yml
+title: "Journaling & Story Scroll"
+description: >
+  A 15-minute daily journaling practice for memory, meaning, and story seeds.
+  Complements Cardio (morning), Strength (evening), and Intermittent Fasting.
+  Focus: capture the day, surface insights, and seed creative narratives.
+
+intent:
+  cadence: "daily"
+  duration_min: 15
+  preferred_time: "flexible (morning recap or evening reflection)"
+  mode: ["reflection", "creative", "planning"]
+
+workspace:
+  medium: ["paper notebook", "markdown note", "docs page"]
+  location: ["desk", "sofa", "porch", "park bench post-walk"]
+  tools: ["timer (15m)", "pen/keyboard", "optional tea/coffee"]
+
+structure:
+  phases:
+    - name: "Arrival"
+      time_min: 1
+      cue: "One deep breath; write the date and a one-line title."
+    - name: "Freewrite / Prompt"
+      time_min: 12
+      cue: "Pick ONE prompt below; write without editing."
+    - name: "Anchor & Exit"
+      time_min: 2
+      cue: "Underline one sentence that matters; add a single next-step."
+
+prompts:
+  reflection:
+    - "What felt most alive today, and why?"
+    - "A challenge I met or dodged—what did it teach me?"
+    - "One moment to remember from today (describe with senses)."
+  gratitude:
+    - "Three small things I appreciate (be specific)."
+    - "Who helped me, directly or indirectly?"
+  creative_seed:
+    - "Write a 6–10 sentence scene from today as fiction."
+    - "Choose an object from the walk; tell its secret history."
+    - "What would Future Me thank Present Me for doing today?"
+  planning:
+    - "One thing to do tomorrow that moves the needle."
+    - "If I only had 90 minutes tomorrow, how would I spend them?"
+    - "A tiny experiment to try this week."
+
+weekly_themes:
+  Monday:    "Momentum — set tone for the week."
+  Tuesday:   "Craft — refine a sentence or idea."
+  Wednesday: "Midweek check — what to adjust?"
+  Thursday:  "Connection — who did I serve/help?"
+  Friday:    "Wins — name them, however small."
+  Saturday:  "Play — follow curiosity."
+  Sunday:    "Meaning — what mattered this week?"
+
+artifacts:
+  purpose: "Optional receipts for memory and dashboards."
+  sources:
+    - "Link to the note (GitHub/Docs/Notion/MD file)"
+    - "Image of a page or a single highlighted line"
+    - "Audio snippet (voice memo) summary"
+  fields:
+    - artifact_url
+    - artifact_image
+    - artifact_caption
+
+status_markers:
+  done: "✅ Wrote ~15 min and captured a highlight."
+  swapped: "🔁 Shorter/alternate format (voice memo / bullet list)."
+  skipped: "💤 Missed today."
+
+log_fields:
+  - date
+  - theme_or_prompt
+  - highlight_line
+  - words_approx
+  - perceived_mood_1_10
+  - status
+  - artifact_url
+  - artifact_image
+  - artifact_caption
+
+notes:
+  - "If time-crunched: write 5 bullets + 1 highlight line."
+  - "Underline ONE sentence daily; these become story seeds."
+  - "Review underlined lines weekly to choose a scene to expand."
