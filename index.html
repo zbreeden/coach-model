@@ -1,340 +1,89 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- The Coach (RoutineIQ) — friendly intro / landing page -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>💪 The Coach — RoutineIQ</title>
-  <meta name="description" content="RoutineIQ: fitness & habit engine for daily training, logging, and progress." />
-  <meta name="color-scheme" content="light dark" />
-
-  <!-- Google Tag Manager (optional; keep if you use GTM) -->
-  <script>
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WVC4SNLB'); /* ← your GTM ID */
-  </script>
-  <!-- End GTM -->
-
-  <style>
-    :root {
-      --bg:        Canvas;
-      --text:      CanvasText;
-      --muted:     color-mix(in oklab, var(--text) 50%, transparent);
-      --card:      color-mix(in oklab, var(--bg) 95%, var(--text) 5%);
-      --accent:    color-mix(in oklab, #3a86ff 65%, #7c3aed 35%);
-      --accent-2:  color-mix(in oklab, #22c55e 55%, #3b82f6 45%);
-      --border:    color-mix(in oklab, var(--text) 12%, transparent);
-      --shadow:    0 10px 30px color-mix(in oklab, var(--text) 10%, transparent);
-      --radius:    18px;
-      --pad:       16px;
-      --gap:       18px;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font: 500 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 0% -10%, color-mix(in oklab, var(--accent) 10%, transparent), transparent) no-repeat,
-                  radial-gradient(900px 500px at 100% 110%, color-mix(in oklab, var(--accent-2) 12%, transparent), transparent) no-repeat,
-                  var(--bg);
-      color: var(--text);
-    }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
-    header {
-      display: flex; align-items: center; justify-content: space-between; gap: var(--gap);
-      margin-bottom: 20px;
-    }
-    .title {
-      display: flex; align-items: center; gap: 14px;
-    }
-    .title .emoji { font-size: 36px; }
-    .title h1 { font-size: 26px; margin: 0; letter-spacing: 0.2px; }
-    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
-    .badge {
-      border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 12px; opacity: 0.9;
-      background: color-mix(in oklab, var(--bg) 85%, var(--text) 15%);
-    }
-
-    .hero {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: clamp(18px, 4vw, 28px);
-      box-shadow: var(--shadow);
-    }
-    .hero p { margin: 0.25rem 0 0; color: var(--muted); }
-
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-    a.button, button.button {
-      appearance: none; border: 1px solid var(--border); background: #fff0;
-      padding: 10px 14px; border-radius: 12px; cursor: pointer;
-      text-decoration: none; color: inherit; font-weight: 600;
-      transition: transform .06s ease, border-color .2s ease, background-color .2s ease;
-      backdrop-filter: saturate(120%);
-    }
-    a.button:hover, button.button:hover { transform: translateY(-1px); border-color: color-mix(in oklab, var(--accent) 40%, var(--border)); }
-    a.primary, button.primary {
-      background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 65%, transparent), color-mix(in oklab, var(--accent-2) 50%, transparent));
-      color: white; border: none;
-    }
-
-    .grid { display: grid; gap: var(--gap); margin: 22px 0; grid-template-columns: repeat(12, 1fr); }
-    .card {
-      grid-column: span 12;
-      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: var(--pad); box-shadow: var(--shadow);
-    }
-    .card h3 { margin: 4px 0 8px; font-size: 18px; }
-    .muted { color: var(--muted); font-size: 14px; }
-
-    @media (min-width: 840px) {
-      .card.span-6 { grid-column: span 6; }
-      .card.span-4 { grid-column: span 4; }
-    }
-
-    .row { display: grid; gap: 10px; grid-template-columns: repeat(12, 1fr); align-items: center; }
-    .row > label { grid-column: span 4; }
-    .row > input, .row > select, .row > textarea { grid-column: span 8; width: 100%; padding: 10px; border-radius: 10px; border: 1px solid var(--border); background: #fff0; color: inherit; }
-    .row > textarea { min-height: 78px; resize: vertical; }
-
-    .checklist { display: grid; gap: 10px; }
-    .check-item { display: flex; align-items: center; gap: 10px; }
-    .check-item input { width: 18px; height: 18px; }
-
-    .back-fab {
-      position: fixed; left: 18px; bottom: 18px; z-index: 8;
-      padding: 10px 14px; border-radius: 999px;
-      background: var(--card); border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    footer { margin: 22px 0 10px; color: var(--muted); font-size: 13px; text-align: center; }
-    code.inline { padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); background: color-mix(in oklab, var(--bg) 92%, var(--text) 8%); }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coach Model - FourTwenty Analytics</title>
+  <meta name="description" content="The Coach is the kick in the ass">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💪</text></svg>">
 </head>
-
 <body>
-  <!-- GTM (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVC4SNLB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <a id="backFab" class="button back-fab" href="https://zbreeden.github.io/FourTwentyAnalytics/" rel="noopener">← Back to Hub</a>
-
-  <div class="wrap">
-    <header>
-      <div class="title">
-        <div class="emoji" aria-hidden="true">💪</div>
-        <div>
-          <h1>The Coach <span class="muted">(RoutineIQ)</span></h1>
-          <div class="badges">
-            <span class="badge">Module</span>
-            <span class="badge">Status: Alpha</span>
-            <span class="badge">Emoji: 💪</span>
-          </div>
-        </div>
-      </div>
-      <div class="badges">
-        <span class="badge" id="nowBadge">—</span>
-      </div>
-    </header>
-
-    <section class="hero">
-      <strong>Your daily fitness & habit engine.</strong>
-      <p>Plan, log, and review sessions. Keep streaks alive. Iterate on small wins.</p>
-
-      <div class="actions">
-        <a class="button" href="https://zbreeden.github.io/FourTwentyAnalytics/" rel="noopener" id="backTop">← Back to Hub</a>
-        <a class="button" id="readmeBtn" href="#" rel="noopener">Open README</a>
-        <a class="button" id="repoBtn" href="#" rel="noopener">View Repo</a>
-        <button class="button primary" id="jumpCheckin">Start Daily Check-in</button>
+  <header>
+    <h1>💪 Coach Model</h1>
+    <p>The Coach is the kick in the ass</p>
+    <nav>
+      <a href="https://zbreeden.github.io/FourTwentyAnalytics/">← Back to Hub</a> |
+      <a href="https://github.com/zbreeden/coach-model">Repository</a> |
+      <a href="https://github.com/zbreeden/FourTwentyAnalytics">Hub Source</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>🌌 Constellation Info</h2>
+      <ul>
+        <li><strong>Orbit</strong>: growth-experiment</li>
+        <li><strong>Status</strong>: seed</li>  
+        <li><strong>Module Key</strong>: <code>coach_model</code></li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>📡 Latest Signal</h2>
+      <div id="signal-container">
+        <p><em>Loading signal data...</em></p>
       </div>
     </section>
-
-    <div class="grid">
-      <!-- Quick Log -->
-      <div class="card span-6">
-        <h3>Quick Log</h3>
-        <div class="muted">Fast entry for a session—stores locally and emits an analytics event.</div>
-        <div class="row" style="margin-top:10px">
-          <label for="type">Type</label>
-          <select id="type">
-            <option>Strength</option>
-            <option>Cardio</option>
-            <option>Mobility</option>
-            <option>Recovery</option>
-          </select>
-
-          <label for="duration">Duration (min)</label>
-          <input id="duration" type="number" min="0" inputmode="numeric" placeholder="45" />
-
-          <label for="rpe">Intensity (RPE 1–10)</label>
-          <input id="rpe" type="number" min="1" max="10" inputmode="numeric" placeholder="7" />
-
-          <label for="notes">Notes</label>
-          <textarea id="notes" placeholder="e.g., 5x5 bench @ 185, felt strong"></textarea>
-        </div>
-        <div class="actions" style="margin-top:12px">
-          <button class="button primary" id="logBtn">Log Session</button>
-          <button class="button" id="clearBtn">Clear</button>
-        </div>
-        <div class="muted" id="logStatus" style="margin-top:10px"></div>
-      </div>
-
-      <!-- Today's Checklist -->
-      <div class="card span-6" id="checkin">
-        <h3>Today’s Checklist</h3>
-        <div class="muted">Tick items as you go—persists in your browser.</div>
-        <div class="checklist" style="margin-top:10px">
-          <label class="check-item"><input type="checkbox" data-key="warmup" /> Warm-up</label>
-          <label class="check-item"><input type="checkbox" data-key="main" /> Main sets</label>
-          <label class="check-item"><input type="checkbox" data-key="cooldown" /> Cool-down</label>
-          <label class="check-item"><input type="checkbox" data-key="hydrate" /> Hydrate</label>
-        </div>
-        <div class="actions" style="margin-top:12px">
-          <button class="button" id="resetChecklist">Reset</button>
-        </div>
-      </div>
-
-      <!-- README render (optional) -->
-      <div class="card span-12" id="readmePanel">
-        <h3>Module README</h3>
-        <div class="muted">Auto-rendered from the repo. If not found, use the button above to open it on GitHub.</div>
-        <div id="readmeContent" style="margin-top:10px; white-space:pre-wrap; overflow:auto;"></div>
-      </div>
-    </div>
-
-    <footer>
-      <div>Part of the FourTwenty Analytics constellation • <code class="inline">seeds/glossary.yml → key: routineiq</code></div>
-    </footer>
-  </div>
+  </main>
+  
+  <footer>
+    <p>Part of the <a href="https://zbreeden.github.io/FourTwentyAnalytics/">FourTwenty Analytics</a> constellation</p>
+  </footer>
 
   <script>
-    // ── Config (update repoName if different) ────────────────────────────────
-    const MODULE = {
-      name: "The Coach (RoutineIQ)",
-      emoji: "💪",
-      repoUser: "zbreeden",
-      repoName: "coach-model",
-      branch:   "main",
-      hubUrl:   "https://zbreeden.github.io/FourTwentyAnalytics/"
-    };
-
-    // ── Analytics hooks (dataLayer only; GTM recommended) ───────────────────
-    window.dataLayer = window.dataLayer || [];
-    function track(event, params = {}) {
-      window.dataLayer.push({ event, ts: Date.now(), module: "routineiq", ...params });
-    }
-    function signalNavClick(action, label, where) {
-      track("nav_click", { action, label, where });
-    }
-
-    // ── Clock badge ─────────────────────────────────────────────────────────
-    function tickNow() {
-      const el = document.getElementById("nowBadge");
-      if (!el) return;
-      const now = new Date();
-      const hh = now.getHours().toString().padStart(2, "0");
-      const mm = now.getMinutes().toString().padStart(2, "0");
-      el.textContent = `Local time ${hh}:${mm}`;
-    }
-    tickNow(); setInterval(tickNow, 30_000);
-
-    // ── Buttons wiring ──────────────────────────────────────────────────────
-    document.getElementById("backTop").addEventListener("click", () => {
-      signalNavClick("back_to_hub", "Back (top)", "index");
-    });
-    document.getElementById("backFab").addEventListener("click", () => {
-      signalNavClick("back_to_hub", "Back (fab)", "index");
-    });
-
-    // Populate repo / README links; safe even if repo not yet created.
-    const BASE_REPO = `https://github.com/${MODULE.repoUser}/${MODULE.repoName}`;
-    const RAW_README = `https://raw.githubusercontent.com/${MODULE.repoUser}/${MODULE.repoName}/${MODULE.branch}/README.md`;
-    const readmeBtn = document.getElementById("readmeBtn");
-    const repoBtn   = document.getElementById("repoBtn");
-    readmeBtn.href  = `${BASE_REPO}/blob/${MODULE.branch}/README.md`;
-    repoBtn.href    = BASE_REPO;
-
-    readmeBtn.addEventListener("click", () => signalNavClick("open_readme", "README.md", "index"));
-    repoBtn.addEventListener("click",   () => signalNavClick("open_repo", "GitHub Repo", "index"));
-
-    // ── Jump to check-in ────────────────────────────────────────────────────
-    document.getElementById("jumpCheckin").addEventListener("click", () => {
-      document.getElementById("checkin").scrollIntoView({ behavior: "smooth", block: "start" });
-      track("cta_checkin", { from: "hero" });
-    });
-
-    // ── Quick Log (local storage only) ──────────────────────────────────────
-    const $ = (id) => document.getElementById(id);
-    const LOG_KEY = "routineiq_last_log";
-    function setStatus(msg) { $("logStatus").textContent = msg; }
-
-    $("logBtn").addEventListener("click", () => {
-      const payload = {
-        type: $("type").value,
-        duration_min: parseInt($("duration").value || "0", 10),
-        rpe: parseInt($("rpe").value || "0", 10),
-        notes: $("notes").value.trim(),
-        at: new Date().toISOString()
-      };
-      localStorage.setItem(LOG_KEY, JSON.stringify(payload));
-      setStatus("Logged locally. (Emitted event: quick_log_submitted)");
-      track("quick_log_submitted", payload);
-    });
-
-    $("clearBtn").addEventListener("click", () => {
-      $("duration").value = "";
-      $("rpe").value = "";
-      $("notes").value = "";
-      setStatus("Cleared form.");
-      track("quick_log_cleared");
-    });
-
-    // Restore last log, if any
-    try {
-      const last = JSON.parse(localStorage.getItem(LOG_KEY) || "null");
-      if (last) {
-        $("type").value = last.type || "Strength";
-        $("duration").value = last.duration_min || "";
-        $("rpe").value = last.rpe || "";
-        $("notes").value = last.notes || "";
-        setStatus("Restored last log from this browser.");
-      }
-    } catch {}
-
-    // ── Checklist (persist checkboxes) ──────────────────────────────────────
-    const CHECK_KEY = "routineiq_checklist";
-    const state = JSON.parse(localStorage.getItem(CHECK_KEY) || "{}");
-    document.querySelectorAll(".check-item input").forEach(cb => {
-      const key = cb.dataset.key;
-      cb.checked = !!state[key];
-      cb.addEventListener("change", () => {
-        state[key] = cb.checked;
-        localStorage.setItem(CHECK_KEY, JSON.stringify(state));
-        track("checklist_toggle", { key, value: cb.checked });
-      });
-    });
-    $("resetChecklist").addEventListener("click", () => {
-      document.querySelectorAll(".check-item input").forEach(cb => cb.checked = false);
-      localStorage.removeItem(CHECK_KEY);
-      track("checklist_reset");
-    });
-
-    // ── README auto-render (graceful if repo/README missing) ────────────────
-    (async function renderReadme() {
-      const el = $("readmeContent");
+    // Load and display latest signal data
+    async function loadSignalData() {
       try {
-        const res = await fetch(RAW_README, { cache: "no-store" });
-        if (!res.ok) { el.textContent = "README.md not found (yet). Use the button above to open it on GitHub."; return; }
-        const text = await res.text();
-        el.textContent = text;
-      } catch (e) {
-        el.textContent = "Could not load README. Network or CORS issue.";
+        const response = await fetch('./signals/latest.json');
+        if (!response.ok) {
+          throw new Error('Signal data not available');
+        }
+        
+        const signal = await response.json();
+        const container = document.getElementById('signal-container');
+        
+        container.innerHTML = `
+          <div style="border: 1px solid #ddd; padding: 1rem; border-radius: 8px; background: #f9f9f9;">
+            <h3>${signal.emoji || '📡'} ${signal.title}</h3>
+            <p><strong>Summary:</strong> ${signal.summary}</p>
+            <p><strong>Broadcast Time:</strong> ${new Date(signal.ts_utc).toLocaleString()}</p>
+            <p><strong>Rating:</strong> <span style="
+              background: ${signal.rating === 'critical' ? '#ff4444' : 
+                         signal.rating === 'high' ? '#ff8800' : 
+                         signal.rating === 'normal' ? '#4CAF50' : '#888'}; 
+              color: white; 
+              padding: 2px 8px; 
+              border-radius: 4px; 
+              font-size: 0.8em;">${signal.rating}</span></p>
+            ${signal.tags && signal.tags.length > 0 ? 
+              `<p><strong>Tags:</strong> ${signal.tags.map(tag => 
+                `<span style="background: #e1e8ed; padding: 2px 6px; border-radius: 12px; font-size: 0.8em; margin-right: 4px;">${tag}</span>`
+              ).join('')}</p>` : ''}
+            ${signal.payload && signal.payload.notes ? 
+              `<details>
+                <summary>📋 Additional Notes</summary>
+                <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px;">${signal.payload.notes}</p>
+              </details>` : ''}
+          </div>
+        `;
+      } catch (error) {
+        document.getElementById('signal-container').innerHTML = 
+          '<p style="color: #888;"><em>Signal data not yet available. Generate signals/latest.json to see broadcast information.</em></p>';
       }
-    })();
+    }
+    
+    // Load signal data when page loads
+    loadSignalData();
   </script>
 </body>
 </html>
