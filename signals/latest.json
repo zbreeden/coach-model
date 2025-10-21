@@ -1,0 +1,35 @@
+{
+  "id": "20251021T164047Z-weekly_update",
+  "ts_utc": "2025-10-21T16:40:47Z",
+  "module": "The Coach (RoutineIQ)",
+  "repo": "coach-model",
+  "title": "Workflows",
+  "summary": "The Coach has now defined four workflows: calories_df.csv, coaching_df.csv, skills_df.csv, steps_df_csv",
+  "rating": "high",
+  "origin": {
+    "name": "The Coach (RoutineIQ)",
+    "url": "https://zbreeden.github.io/coach-model/",
+    "emoji": "💪"
+  },
+  "status": "fired",
+  "links": {
+    "readme": "https://github.com/zbreeden/coach-model#readme",
+    "page": "https://zbreeden.github.io/coach-model/"
+  },
+  "payload": {
+    "orbit": "growth-experiment",
+    "status": "fired",
+    "module_key": "coach_model",
+    "broadcast_key": "weekly_update",
+    "tags": [
+      "log",
+      "workflows"
+    ],
+    "notes": [
+      "calories_df.csv",
+      "coaching_df.csv",
+      "skills_df.csv",
+      "steps_df.csv"
+    ]
+  }
+}
