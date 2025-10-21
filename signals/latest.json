@@ -20,7 +20,9 @@
     "module_key": "coach_model",
     "broadcast_key": "weekly_update",
     "tags": [
-      "log"
+      "log",
+      "Python",
+      "Workflows"
     ]
     "artifacts": [
       "calories_df.csv",
