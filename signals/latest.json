@@ -20,15 +20,7 @@
     "module_key": "coach_model",
     "broadcast_key": "weekly_update",
     "tags": [
-      "log",
-      "Python",
-      "Workflows"
-    ]
-    "artifacts": [
-      "calories_df.csv",
-      "coaching_df_csv",
-      "skills_df.csv",
-      "steps_df_csv"
+      "log"
     ]
   }
 }
