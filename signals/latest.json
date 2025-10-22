@@ -1,0 +1,29 @@
+{
+  "id": "20251022T170532Z-daily_update",
+  "ts_utc": "2025-10-22T17:05:32Z",
+  "module": "The Coach (RoutineIQ)",
+  "repo": "coach-model",
+  "title": "Workflow Progress Generator",
+  "summary": "The Coach runs its first workflow progress generator for fresh UI and upload to The Launch.",
+  "rating": "critical",
+  "origin": {
+    "name": "The Coach (RoutineIQ)",
+    "url": "https://zbreeden.github.io/coach-model/",
+    "emoji": "💪"
+  },
+  "status": "fired",
+  "links": {
+    "readme": "https://github.com/zbreeden/coach-model#readme",
+    "page": "https://zbreeden.github.io/coach-model/"
+  },
+  "payload": {
+    "orbit": "🧪",
+      "status": "🔥",
+      "notes": "USER SKILLS - ETL, Python, Data Engineering, Website Development, APIs",
+    "module_key": "coach_model",
+    "broadcast_key": "daily_update",
+    "tags": [
+      "workflows"
+    ]
+  }
+}
