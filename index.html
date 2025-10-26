@@ -112,7 +112,7 @@
     // README renderer
     const readmeToggle = document.getElementById('readme-toggle');
     const readmeContainer = document.getElementById('readme-container');
-    async function loadTrainerReadme() {
+    async function loadCoachReadme() {
       try {
         const resp = await fetch('./README.md');
         if (!resp.ok) throw new Error('README not available');
