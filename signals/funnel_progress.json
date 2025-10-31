@@ -221,9 +221,9 @@
     "caloric_limiting_session": {
       "id": "caloric_limiting_session",
       "title": "Caloric Limiting Session",
-      "steps_total": 23,
+      "steps_total": 24,
       "steps_duration": 30,
-      "steps_metric": 0.77,
+      "steps_metric": 0.8,
       "steps_target": 2,
       "last_activity": "2025-10-30",
       "status": "🌋",
@@ -233,9 +233,9 @@
         {
           "id": "load_max_2000",
           "title": "2000 calorie day",
-          "count": 11,
+          "count": 12,
           "status": "🌋",
-          "last_activity": "2025-10-27"
+          "last_activity": "2025-10-30"
         },
         {
           "id": "output_min_450",
