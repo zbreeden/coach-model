@@ -214,22 +214,6 @@
               last.style.marginBottom = '0.5rem';
               last.textContent = t.last_activity ? `Last: ${new Date(t.last_activity).toLocaleDateString()}` : '';
 
-              // Progress bar (kept)
-              const rawPercent = (typeof t.percent_complete === 'number' || typeof t.percent_complete === 'string') ? Number(t.percent_complete) : null;
-              let displayPercent = null;
-              if (rawPercent !== null && !isNaN(rawPercent)) displayPercent = rawPercent > 1 ? rawPercent : rawPercent * 100;
-              const progressBarWrap = document.createElement('div');
-              progressBarWrap.style.background = '#f1f5f8';
-              progressBarWrap.style.height = '10px';
-              progressBarWrap.style.borderRadius = '999px';
-              progressBarWrap.style.overflow = 'hidden';
-              const progressBar = document.createElement('div');
-              progressBar.style.height = '100%';
-              const barPercent = displayPercent !== null ? Math.min(Math.max(displayPercent, 0), 100) : 0;
-              progressBar.style.width = `${barPercent}%`;
-              progressBar.style.background = '#4CAF50';
-              progressBarWrap.appendChild(progressBar);
-
               // Steps details
               const details = document.createElement('details');
               const summaryEl = document.createElement('summary');
