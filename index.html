@@ -177,19 +177,50 @@
         keys.forEach(k => {
           const t = trainings[k];
           const card = document.createElement('div'); card.style.border = '1px solid #e3e3e3'; card.style.padding = '0.75rem'; card.style.borderRadius = '8px'; card.style.background = '#fff';
-          const title = document.createElement('h4'); title.style.margin = '0 0 0.25rem 0'; title.textContent = t.title || k;
-          const meta = document.createElement('div'); meta.style.fontSize = '0.85rem'; meta.style.color = '#666'; meta.style.marginBottom = '0.5rem';
-          const rawPercent = (typeof t.percent_complete === 'number' || typeof t.percent_complete === 'string') ? Number(t.percent_complete) : null;
-          let displayPercent = null; if (rawPercent !== null && !isNaN(rawPercent)) displayPercent = rawPercent > 1 ? rawPercent : rawPercent * 100;
-          const percentText = displayPercent !== null ? (Math.round(displayPercent * 100) / 100) + '%' : '—';
-          const totalSteps = t.steps_total || 0; meta.textContent = `${ totalSteps } • ${ percentText }`;
-          const last = document.createElement('div'); const target = (typeof t.control_flow_target === 'number') ? t.control_flow_target : 150; const percentDisplay = (displayPercent !== null && !isNaN(displayPercent)) ? (Math.round(displayPercent * 10) / 10) + '%' : percentText; title.textContent = `${t.title || k} — Target: ${target} — ${percentDisplay}`;
-          last.style.fontSize = '0.85rem'; last.style.color = '#888'; last.style.marginBottom = '0.5rem'; last.textContent = t.last_activity ? `Last: ${new Date(t.last_activity).toLocaleDateString()}` : '';
+          // Title (only the training title)
+          const title = document.createElement('h4');
+          title.style.margin = '0 0 0.25rem 0';
+          title.textContent = t.title || k;
+
+          // Bold target line: "<steps_target> per day"
+          const targetLine = document.createElement('div');
+          const targetVal = (typeof t.steps_target === 'number' || (typeof t.steps_target === 'string' && t.steps_target.trim() !== '')) ? t.steps_target : '—';
+          targetLine.innerHTML = `<strong>${targetVal} per day</strong>`;
+          targetLine.style.marginBottom = '0.25rem';
+
+          // Small shaded lines: steps_metric and in_control
+          const metricLine = document.createElement('div');
+          metricLine.style.fontSize = '0.85rem';
+          metricLine.style.color = '#666';
+          metricLine.style.marginBottom = '0.25rem';
+          const metricVal = (typeof t.steps_metric !== 'undefined' && t.steps_metric !== null) ? t.steps_metric : '—';
+          metricLine.textContent = `Metric: ${metricVal}`;
+
+          const controlLine = document.createElement('div');
+          controlLine.style.fontSize = '0.85rem';
+          controlLine.style.color = '#666';
+          controlLine.style.marginBottom = '0.5rem';
+          const inControl = (typeof t.in_control !== 'undefined' && t.in_control !== null) ? String(t.in_control) : '—';
+          controlLine.textContent = `In control: ${inControl}`;
+
+          // Last activity line
+          const last = document.createElement('div');
+          last.style.fontSize = '0.85rem';
+          last.style.color = '#888';
+          last.style.marginBottom = '0.5rem';
+          last.textContent = t.last_activity ? `Last: ${new Date(t.last_activity).toLocaleDateString()}` : '';
           const progressBarWrap = document.createElement('div'); progressBarWrap.style.background = '#f1f5f8'; progressBarWrap.style.height = '10px'; progressBarWrap.style.borderRadius = '999px'; progressBarWrap.style.overflow = 'hidden';
           const progressBar = document.createElement('div'); progressBar.style.height = '100%'; const barPercent = displayPercent !== null ? Math.min(Math.max(displayPercent, 0), 100) : 0; progressBar.style.width = `${barPercent}%`; progressBar.style.background = '#4CAF50'; progressBarWrap.appendChild(progressBar);
           const details = document.createElement('details'); const summaryEl = document.createElement('summary'); summaryEl.textContent = 'Steps'; details.appendChild(summaryEl);
           const stepsList = document.createElement('ul'); stepsList.style.margin = '0.5rem 0 0 1rem'; (t.steps || []).forEach(s => { const li = document.createElement('li'); const stepName = (s && (s.step_id_name || s.title || s.id || s.step_id)) || String(s); const count = s && (s.count || s.count === 0) ? `(${s.count})` : ''; const status = s && s.status ? ` ${s.status}` : ''; li.textContent = `${stepName} ${count}${status}`.trim(); stepsList.appendChild(li); }); details.appendChild(stepsList);
-          card.appendChild(title); card.appendChild(meta); card.appendChild(last); card.appendChild(progressBarWrap); card.appendChild(details); grid.appendChild(card);
+          card.appendChild(title);
+          card.appendChild(targetLine);
+          card.appendChild(metricLine);
+          card.appendChild(controlLine);
+          card.appendChild(last);
+          card.appendChild(progressBarWrap);
+          card.appendChild(details);
+          grid.appendChild(card);
         });
         progressContainer.innerHTML = ''; progressContainer.appendChild(grid); progressLoaded = true;
       } catch (err) {
