@@ -4,11 +4,11 @@
     "walk_session": {
       "id": "walk_session",
       "title": "Cardio Walking Session",
-      "steps_total": 53,
-      "steps_duration": 30,
-      "steps_metric": 1.77,
+      "steps_total": 59,
+      "steps_duration": 31,
+      "steps_metric": 1.90,
       "steps_target": 3,
-      "last_activity": "2025-10-30",
+      "last_activity": "2025-10-31",
       "status": "🔥",
       "notes": "A guided walking routine to enhance cardiovascular endurance.",
       "in_control": false,
@@ -16,41 +16,41 @@
         {
           "id": "walk_3_mile",
           "title": "3-mile walk",
-          "count": 14,
+          "count": 15,
           "status": "🌋",
-          "last_activity": "2025-10-26"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "walk_1_mile",
           "title": "1-mile walk",
-          "count": 15,
+          "count": 16,
           "status": "🔥",
-          "last_activity": "2025-10-30"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "10k_steps_day",
           "title": "10,000 steps in a day",
-          "count": 17,
+          "count": 18,
           "status": "🔥",
-          "last_activity": "2025-10-30"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "walk_15_min",
           "title": "15-minute walk",
-          "count": 9,
+          "count": 10,
           "status": "🌋",
-          "last_activity": "2025-10-30"
+          "last_activity": "2025-10-31"
         }
       ]
     },
     "upper_body_session": {
       "id": "upper_body_session",
       "title": "Upper Body Strength Session",
-      "steps_total": 47,
-      "steps_duration": 30,
-      "steps_metric": 1.57,
+      "steps_total": 48,
+      "steps_duration": 31,
+      "steps_metric": 1.52,
       "steps_target": 3,
-      "last_activity": "2025-10-30",
+      "last_activity": "2025-10-31",
       "status": "🌋",
       "notes": "Strength routines focusing on upper body muscles.",
       "in_control": false,
@@ -58,9 +58,9 @@
         {
           "id": "pushups_20",
           "title": "20 push-ups",
-          "count": 10,
+          "count": 11,
           "status": "🌿",
-          "last_activity": "2025-10-30"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "curls_20_15lbs",
@@ -102,11 +102,11 @@
     "core_session": {
       "id": "core_session",
       "title": "Core Body Strength Session",
-      "steps_total": 45,
-      "steps_duration": 30,
-      "steps_metric": 1.5,
+      "steps_total": 47,
+      "steps_duration": 31,
+      "steps_metric": 1.52,
       "steps_target": 3,
-      "last_activity": "2025-10-30",
+      "last_activity": "2025-10-31",
       "status": "🌋",
       "notes": "Exercises targeting core muscle groups for stability and strength.",
       "in_control": false,
@@ -121,16 +121,16 @@
         {
           "id": "side_plank_left_20s",
           "title": "20 second side plank - left",
-          "count": 6,
+          "count": 7,
           "status": "🌿",
-          "last_activity": "2025-10-27"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "side_plank_right_20s",
           "title": "20 second side plank - right",
-          "count": 6,
+          "count": 7,
           "status": "🌿",
-          "last_activity": "2025-10-27"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "plank_20s",
@@ -172,11 +172,11 @@
     "lower_body_session": {
       "id": "lower_body_session",
       "title": "Lower Body Strength Session",
-      "steps_total": 27,
-      "steps_duration": 30,
-      "steps_metric": 0.9,
+      "steps_total": 28,
+      "steps_duration": 31,
+      "steps_metric": 0.90,
       "steps_target": 3,
-      "last_activity": "2025-10-30",
+      "last_activity": "2025-10-31",
       "status": "🌋",
       "notes": "Routines designed to strengthen lower body muscles.",
       "in_control": false,
@@ -205,9 +205,9 @@
         {
           "id": "calf_raises_20",
           "title": "20 calf raises",
-          "count": 5,
+          "count": 6,
           "status": "🌿",
-          "last_activity": "2025-10-28"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "alternate_leg_lunges_20",
@@ -221,11 +221,11 @@
     "caloric_limiting_session": {
       "id": "caloric_limiting_session",
       "title": "Caloric Limiting Session",
-      "steps_total": 24,
-      "steps_duration": 30,
-      "steps_metric": 0.8,
+      "steps_total": 25,
+      "steps_duration": 31,
+      "steps_metric": 0.81,
       "steps_target": 2,
-      "last_activity": "2025-10-30",
+      "last_activity": "2025-10-31",
       "status": "🌋",
       "notes": "Managing daily caloric intake and output for weight control.",
       "in_control": false,
@@ -240,21 +240,21 @@
         {
           "id": "output_min_450",
           "title": "450 energy output",
-          "count": 12,
+          "count": 13,
           "status": "🌋",
-          "last_activity": "2025-10-29"
+          "last_activity": "2025-10-31"
         }
       ]
     },
     "elevate_session": {
       "id": "elevate_session",
       "title": "Elevate Session",
-      "steps_total": 57,
-      "steps_duration": 30,
-      "steps_metric": 1.9,
+      "steps_total": 60,
+      "steps_duration": 31,
+      "steps_metric": 1.94,
       "steps_target": 3,
-      "last_activity": "2025-10-30",
-      "status": "🌋",
+      "last_activity": "2025-10-31",
+      "status": "🔥",
       "notes": "Elevate sessions managing mental memory, focus, and processing speed.",
       "in_control": false,
       "steps": [
@@ -387,9 +387,9 @@
         {
           "id": "elevate_visualizations",
           "title": "Visualizations in Elevate",
-          "count": 1,
+          "count": 2,
           "status": "🌱",
-          "last_activity": "2025-10-18"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "elevate_inversion",
@@ -401,9 +401,9 @@
         {
           "id": "elevate_clarity",
           "title": "Clarity in Elevate",
-          "count": 2,
+          "count": 3,
           "status": "🌱",
-          "last_activity": "2025-10-27"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "elevate_processing",
@@ -443,9 +443,9 @@
         {
           "id": "elevate_purchasing",
           "title": "Purchasing in Elevate",
-          "count": 1,
+          "count": 2,
           "status": "🌱",
-          "last_activity": "2025-10-25"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "elevate_connotation",
@@ -466,21 +466,21 @@
     "headspace_session": {
       "id": "headspace_session",
       "title": "Headspace Session",
-      "steps_total": 8,
-      "steps_duration": 30,
-      "steps_metric": 0.27,
+      "steps_total": 9,
+      "steps_duration": 31,
+      "steps_metric": 0.3,
       "steps_target": 2,
-      "last_activity": "2025-10-30",
+      "last_activity": "2025-10-31",
       "status": "🌿",
-      "notes": "Headspace and personal meditation sessions managing mindfulness and meditation.",
+      "notes": "Headspace and personal meditation sessions managing mindfulness and emotional intelligence.",
       "in_control": false,
       "steps": [
         {
           "id": "headspace_15min",
           "title": "15-minute guided meditation in Headspace",
-          "count": 6,
+          "count": 7,
           "status": "🌿",
-          "last_activity": "2025-10-30"
+          "last_activity": "2025-10-31"
         },
         {
           "id": "personal_space_15min",
@@ -494,11 +494,11 @@
     "mindmap_session": {
       "id": "mindmap_session",
       "title": "Mind Map Session",
-      "steps_total": 3,
-      "steps_duration": 30,
-      "steps_metric": 0.1,
+      "steps_total": 4,
+      "steps_duration": 31,
+      "steps_metric": 0.13,
       "steps_target": 1,
-      "last_activity": "2025-10-30",
+      "last_activity": "2025-10-31",
       "status": "🌿",
       "notes": "Mind mapping exercises to enhance general knowledge and understanding.",
       "in_control": false,
@@ -520,6 +520,12 @@
           "title": "Key concepts - logic, metaphysics, ethics, politics, legacy.",
           "status": "✅",
           "last_activity": "2025-10-30"
+        },
+        {
+          "id": "mindmap_eugenie_delacroix",
+          "title": "Key concepts - French Romantic artist, dramatic scenes, vibrant colors, Liberty Leading The People.",
+          "status": "✅",
+          "last_activity": "2025-10-31"
         }
       ]
     }
