@@ -103,5 +103,4 @@ The generator now writes a CSV summary to `coach-model/data/internal/log.report.
 - Use `--dry-run` first to confirm the generator discovers the coachings you expect.
 - If your YAML adds a `control_flow_target` under a specific coaching, the generator will respect that value when computing `percent_complete`.
 
-
 *This star is part of the FourTwenty Analytics constellation - a modular analytics sandbox where each repository is a specialized "model" within an orbital system.*
