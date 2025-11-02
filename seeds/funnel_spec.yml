@@ -1,0 +1,471 @@
+# seeds/funnel_spec.yml
+version: 1
+funnels:
+skills:
+  - skill_track_code: SK-CARDIO
+    skill_track_name: Cardio Health
+    skill_track_description: Maintains and improves cardiovascular fitness through regular aerobic exercise.
+    skill_is_completed: false
+    skill_status: 🔥
+    skill_track_last_update_date: 2025-11-01
+    coachings:
+      - coaching_id: walk_session
+        coaching_id_name: Cardio Walking Session
+        coaching_id_description: A guided walking routine to enhance cardiovascular endurance.
+        coaching_status: 🔥
+        coaching_last_update_date: 2025-11-01
+        coaching_target: 3
+        coaching_target_measure: steps/day
+        coaching_total_steps: 62
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: 1.94
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: walk_3_mile
+            step_id_name: 3-mile walk
+            step_id_count: 16
+            step_status: 🔥
+            step_last_update_date: 2025-11-01
+          - step_id: walk_1_mile
+            step_id_name: 1-mile walk
+            step_id_count: 16
+            step_status: 🔥
+            step_last_update_date: 2025-10-31
+          - step_id: 10k_steps_day
+            step_id_name: 10,000 steps in a day
+            step_id_count: 19
+            step_status: 🔥
+            step_last_update_date: 2025-11-01
+          - step_id: walk_15_min
+            step_id_name: 15-minute walk
+            step_id_count: 11
+            step_status: 🌋
+            step_last_update_date: 2025-11-01
+ 
+  - skill_track_code: SK-STRENGTH
+    skill_track_name: Strength Training
+    skill_track_description: Builds muscle strength and endurance through resistance exercises.
+    skill_is_completed: false
+    skill_status: 🟢
+    skill_track_last_update_date: 2025-11-01
+    coachings:
+      - coaching_id: upper_body_session
+        coaching_id_name: Upper Body Strength Session
+        coaching_id_description: Strength routines focusing on upper body muscles.
+        coaching_status: 🌋
+        coaching_last_update_date: 2025-11-01
+        coaching_target: 3
+        coaching_target_measure: steps/day
+        coaching_total_steps: 51
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: 1.59
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: pushups_20
+            step_id_name: 20 push-ups
+            step_id_count: 11
+            step_status: 🌿
+            step_last_update_date: 2025-10-31
+          - step_id: curls_20_15lbs
+            step_id_name: 20 bicep curls of 15 lbs
+            step_id_count: 12
+            step_status: 🌋
+            step_last_update_date: 2025-10-30
+          - step_id: tricep_pushbacks_20_15lbs
+            step_id_name: 20 tricep pushbacks of 15 lbs
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-10-30
+          - step_id: bent_over_flies_20_15lbs
+            step_id_name: 20 bent-over flies of 15 lbs
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-11-01
+          - step_id: arnold_presses_20_15lbs
+            step_id_name: 20 Arnold Presses of 15 lbs
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-10-30
+          - step_id: upright_rows_20_15lbs
+            step_id_name: 20 upright rows of 15 lbs
+            step_id_count: 8
+            step_status: 🌿
+            step_last_update_date: 2025-11-01
+      - coaching_id: core_session
+        coaching_id_name: Core Body Strength Session
+        coaching_id_description: Exercises targeting core muscle groups for stability and strength.
+        coaching_status: 🌋
+        coaching_last_update_date: 2025-11-01
+        coaching_target: 3
+        coaching_target_measure: steps/day
+        coaching_total_steps: 49
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: 1.53
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: crunches_20
+            step_id_name: 20 crunches
+            step_id_count: 10
+            step_status: 🌿
+            step_last_update_date: 2025-11-01
+          - step_id: side_plank_left_20s
+            step_id_name: 20 second side plank - left
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-10-31
+          - step_id: side_plank_right_20s
+            step_id_name: 20 second side plank - right
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-10-31
+          - step_id: plank_20s
+            step_id_name: 20 second plank
+            step_id_count: 8
+            step_status: 🌿
+            step_last_update_date: 2025-10-30
+          - step_id: hip_raises_20
+            step_id_name: 20 hip raises
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-11-01
+          - step_id: 20_v_up_roll_ups
+            step_id_name: 20 V-Up-Roll-Ups
+            step_id_count: 4
+            step_status: 🌱
+            step_last_update_date: 2025-10-30
+          - step_id: high_knees_100
+            step_id_name: 100 high knees
+            step_id_count: 4
+            step_status: 🌿
+            step_last_update_date: 2025-10-26
+          - step_id: high_knee_twists_50
+            step_id_name: 50 high knee twists
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-27
+      - coaching_id: lower_body_session
+        coaching_id_name: Lower Body Strength Session
+        coaching_id_description: Routines designed to strengthen lower body muscles.
+        coaching_status: 🌋
+        coaching_last_update_date: 2025-11-01
+        coaching_target: 3
+        coaching_target_measure: steps/day
+        coaching_total_steps: 30
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: .97
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: squats_20
+            step_id_name: 20 squats
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-11-01
+          - step_id: glute_bridges_20
+            step_id_name: 20 glute bridges
+            step_id_count: 5
+            step_status: 🌿
+            step_last_update_date: 2025-11-01
+          - step_id: alternate_leg_step_ups_20
+            step_id_name: 20 alternate leg step-ups
+            step_id_count: 7
+            step_status: 🌿
+            step_last_update_date: 2025-10-30
+          - step_id: calf_raises_20
+            step_id_name: 20 calf raises
+            step_id_count: 6
+            step_status: 🌿
+            step_last_update_date: 2025-10-31
+          - step_id: alternate_leg_lunges_20
+            step_id_name: 20 alternate leg lunges
+            step_id_count: 5
+            step_status: 🌿
+            step_last_update_date: 2025-10-30
+ 
+  - skill_track_code: SK-NUTRITION
+    skill_track_name: Nutritional Health
+    skill_track_description: Attempts to maintain a balanced caloric intake and improved nutritional habits.
+    skill_is_completed: false
+    skill_status: 🟢
+    skill_track_last_update_date: 2025-10-31
+    coachings:
+      - coaching_id: caloric_limiting_session
+        coaching_id_name: Caloric Limiting Session
+        coaching_id_description: Managing daily caloric intake and output for weight control.
+        coaching_status: 🌿
+        coaching_last_update_date: 2025-10-31
+        coaching_target: 2
+        coaching_target_measure: steps/day
+        coaching_total_steps: 25
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: .78
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: load_max_2000
+            step_id_name: 2000 calorie day
+            step_id_count: 12
+            step_status: 🌿
+            step_last_update_date: 2025-10-30
+          - step_id: output_min_450
+            step_id_name: 450 energy output
+            step_id_count: 13
+            step_status: 🌋
+            step_last_update_date: 2025-10-31
+ 
+  - skill_track_code: SK-MENTAL
+    skill_track_name: Mental Health
+    skill_track_description: Focuses on stress management, mindfulness, and emotional well-being.
+    skill_is_completed: false
+    skill_status: 🔥
+    skill_track_last_update_date: 2025-11-01
+    coachings:
+      - coaching_id: elevate_session
+        coaching_id_name: Elevate Session
+        coaching_id_description: Elevate sessions managing mental memory, focus, and processing speed.
+        coaching_status: 🔥
+        coaching_last_update_date: 2025-11-01
+        coaching_target: 3
+        coaching_target_measure: steps/day
+        coaching_total_steps: 63
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: 1.97
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: elevate_spelling
+            step_id_name: Spelling in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-21
+          - step_id: elevate_retention
+            step_id_name: Retention in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-24
+          - step_id: elevate_tipping
+            step_id_name: Tipping in Elevate
+            step_id_count: 3
+            step_status: 🌱
+            step_last_update_date: 2025-10-27
+          - step_id: elevate_expression
+            step_id_name: Expression in Elevate
+            step_id_count: 6
+            step_status: 🌿
+            step_last_update_date: 2025-10-30
+          - step_id: elevate_synonyms
+            step_id_name: Synonyms in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-11
+          - step_id: elevate_equivalence
+            step_id_name: Equivalence in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-20
+          - step_id: elevate_percentages
+            step_id_name: Percentages in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-13
+          - step_id: elevate_eloquence
+            step_id_name: Eloquence in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-28
+          - step_id: elevate_name_recall
+            step_id_name: Name Recall in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-27
+          - step_id: elevate_division
+            step_id_name: Division in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-30
+          - step_id: elevate_attention
+            step_id_name: Attention in Elevate
+            step_id_count: 3
+            step_status: 🌱
+            step_last_update_date: 2025-10-29
+          - step_id: elevate_detail
+            step_id_name: Detail in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-18
+          - step_id: elevate_agility
+            step_id_name: Agility in Elevate
+            step_id_count: 3
+            step_status: 🌱
+            step_last_update_date: 2025-10-28
+          - step_id: elevate_word_swap
+            step_id_name: Word Swap in Elevate
+            step_id_count: 3
+            step_status: 🌱
+            step_last_update_date: 2025-11-01
+          - step_id: elevate_brevity
+            step_id_name: Brevity in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-15
+          - step_id: elevate_diction
+            step_id_name: Diction in Elevate
+            step_id_count: 5
+            step_status: 🌿
+            step_last_update_date: 2025-10-26
+          - step_id: elevate_association
+            step_id_name: Association in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-17
+          - step_id: elevate_transitions
+            step_id_name: Transitions in Elevate
+            step_id_count: 4
+            step_status: 🌱
+            step_last_update_date: 2025-10-29
+          - step_id: elevate_visualizations
+            step_id_name: Visualizations in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-31
+          - step_id: elevate_inversion
+            step_id_name: Inversion in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-20
+          - step_id: elevate_clarity
+            step_id_name: Clarity in Elevate
+            step_id_count: 3
+            step_status: 🌱
+            step_last_update_date: 2025-10-31
+          - step_id: elevate_processing
+            step_id_name: Processing in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-21
+          - step_id: elevate_extraction
+            step_id_name: Extraction in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-22
+          - step_id: elevate_estimation
+            step_id_name: Estimation in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-23
+          - step_id: elevate_subtraction
+            step_id_name: Subtraction in Elevate
+            step_id_count: 2
+            step_status: 🌱
+            step_last_update_date: 2025-10-28
+          - step_id: elevate_word_parts
+            step_id_name: Word Parts in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-25
+          - step_id: elevate_purchasing
+            step_id_name: Purchasing in Elevate
+            step_id_count: 3
+            step_status: 🌱
+            step_last_update_date: 2025-11-01
+          - step_id: elevate_connotation
+            step_id_name: Connotation in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-26
+          - step_id: elevate_comprehension
+            step_id_name: Comprehension in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-10-29
+          - step_id: elevate_sequencing
+            step_id_name: Sequencing in Elevate
+            step_id_count: 1
+            step_status: 🌱
+            step_last_update_date: 2025-11-01
+      - coaching_id: headspace_session
+        coaching_id_name: Headspace Session
+        coaching_id_description: Headspace and personal meditation sessions managing mindfulness and emotional intelligence.
+        coaching_status: 🌿
+        coaching_last_update_date: 2025-11-01
+        coaching_target: 2 
+        coaching_target_measure: steps/day
+        coaching_total_steps: 10
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: .31
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: headspace_15min
+            step_id_name: 15-minute guided meditation in Headspace
+            step_id_count: 8
+            step_status: 🌿
+            step_last_update_date: 2025-11-01
+          - step_id: personal_space_15min
+            step_id_name: 15-minute personal meditation
+            step_id_count: 2
+            step_status: 🌿
+            step_last_update_date: 2025-10-28
+      - coaching_id: mindmap_session
+        coaching_id_name: MindMap Session
+        coaching_id_description: Mind mapping exercises to enhance general knowledge and understanding.
+        coaching_status: 🌿
+        coaching_last_update_date: 2025-11-01
+        coaching_target: 1 
+        coaching_target_measure: steps/day
+        coaching_total_steps: 5
+        coaching_current_duration: 32
+        coaching_current_duration_measure: day(s)
+        coaching_current_metric: .16
+        coaching_current_measure: steps/day
+        coaching_is_complete: false
+        coaching_in_control: false
+        steps:
+          - step_id: mindmap_philosophy_of_confidence
+            step_id_name: Philosophy of Confidence - Key concepts - fake it till you make it, power poses, visualization.
+            step_status: ✅
+            step_update_date: 2025-10-28
+            step_metric: .85
+            step_metric_value: interest level (0-1)
+          - step_id: mindmap_theories_of_personality
+            step_id_name: Theories of Personality - Key concepts - psychoanalytic, humanistic, trait, social-cognitive.
+            step_status: ✅
+            step_update_date: 2025-10-29
+            step_metric: .80
+            step_metric_value: interest level (0-1)
+          - step_id: mindmap_aristotle
+            step_id_name: Aristotle - Key concepts - logic, metaphysics, ethics, politics, legacy.
+            step_status: ✅
+            step_update_date: 2025-10-30
+            step_metric: .35
+            step_metric_value: interest level (0-1)
+          - step_id: mindmap_eugenie_delacroix
+            step_id_name: Eugenie Delacroix - Key concepts - French Romantic artist, dramatic scenes, vibrant colors, Liberty Leading The People.
+            step_status: ✅
+            step_update_date: 2025-10-31
+            step_metric: .55
+            step_metric_value: interest level (0-1)
+          - step_id: mindmap_win_wei
+            step_id_name: Win Wei - Key concepts - Daoism, effortless action, flowing with life rather than forcing things, active with ease.
+            step_status: ✅
+            step_update_date: 2025-11-01
+            step_metric: .85
+            step_metric_value: interest level (0-1)
+        
