@@ -46,14 +46,14 @@
     "upper_body_session": {
       "id": "upper_body_session",
       "title": "Upper Body Strength Session",
-      "steps_total": 51,
-      "steps_duration": 32,
-      "steps_metric": 1.59,
+      "steps_total": 52,
+      "steps_duration": 33,
+      "steps_metric": 1.58,
       "steps_target": 3,
-      "last_activity": "2025-11-01",
+      "last_activity": "2025-11-02",
       "status": "🌋",
       "notes": "Strength routines focusing on upper body muscles.",
-      "in_control": false,
+      "in_control": "😭",
       "steps": [
         {
           "id": "pushups_20",
@@ -72,9 +72,9 @@
         {
           "id": "tricep_pushbacks_20_15lbs",
           "title": "20 tricep pushbacks of 15 lbs",
-          "count": 7,
+          "count": 8,
           "status": "🌿",
-          "last_activity": "2025-10-30"
+          "last_activity": "2025-11-02"
         },
         {
           "id": "bent_over_flies_20_15lbs",
@@ -249,14 +249,14 @@
     "elevate_session": {
       "id": "elevate_session",
       "title": "Elevate Session",
-      "steps_total": 63,
-      "steps_duration": 32,
-      "steps_metric": 1.97,
+      "steps_total": 66,
+      "steps_duration": 33,
+      "steps_metric": 2.00,
       "steps_target": 3,
-      "last_activity": "2025-11-01",
+      "last_activity": "2025-11-02",
       "status": "🔥",
       "notes": "Elevate sessions managing mental memory, focus, and processing speed.",
-      "in_control": false,
+      "in_control": "😭",
       "steps": [
         {
           "id": "elevate_spelling",
@@ -268,9 +268,9 @@
         {
           "id": "elevate_retention",
           "title": "Retention in Elevate",
-          "count": 2,
+          "count": 3,
           "status": "🌱",
-          "last_activity": "2025-10-24"
+          "last_activity": "2025-11-02"
         },
         {
           "id": "elevate_tipping",
@@ -289,9 +289,9 @@
         {
           "id": "elevate_synonyms",
           "title": "Synonyms in Elevate",
-          "count": 1,
+          "count": 2,
           "status": "🌱",
-          "last_activity": "2025-10-11"
+          "last_activity": "2025-11-02"
         },
         {
           "id": "elevate_equivalence",
@@ -429,9 +429,9 @@
         {
           "id": "elevate_subtraction",
           "title": "Subtraction in Elevate",
-          "count": 1,
+          "count": 2,
           "status": "🌱",
-          "last_activity": "2025-10-24"
+          "last_activity": "2025-11-01"
         },
         {
           "id": "elevate_word_parts",
@@ -473,27 +473,27 @@
     "headspace_session": {
       "id": "headspace_session",
       "title": "Headspace Session",
-      "steps_total": 10,
-      "steps_duration": 32,
-      "steps_metric": 0.31,
+      "steps_total": 11,
+      "steps_duration": 33,
+      "steps_metric": 0.33,
       "steps_target": 2,
-      "last_activity": "2025-11-01",
+      "last_activity": "2025-11-02",
       "status": "🌿",
       "notes": "Headspace and personal meditation sessions managing mindfulness and emotional intelligence.",
-      "in_control": false,
+      "in_control": "😭",
       "steps": [
         {
           "id": "headspace_15min",
           "title": "15-minute guided meditation in Headspace",
-          "count": 8,
+          "count": 9,
           "status": "🌿",
-          "last_activity": "2025-11-01"
+          "last_activity": "2025-11-02"
         },
         {
           "id": "personal_space_15min",
           "title": "15-minute personal meditation",
           "count": 2,
-          "status": "🌿",
+          "status": "❄️",
           "last_activity": "2025-10-28"
         }
       ]
@@ -501,14 +501,14 @@
     "mindmap_session": {
       "id": "mindmap_session",
       "title": "Mind Map Session",
-      "steps_total": 5,
-      "steps_duration": 32,
-      "steps_metric": 0.16,
+      "steps_total": 6,
+      "steps_duration": 33,
+      "steps_metric": 0.18,
       "steps_target": 1,
-      "last_activity": "2025-11-01",
+      "last_activity": "2025-11-02",
       "status": "🌿",
       "notes": "Mind mapping exercises to enhance general knowledge and understanding.",
-      "in_control": false,
+      "in_control": "😭",
       "steps": [
         {
           "id": "mindmap_philosophy_of_confidence",
@@ -535,10 +535,16 @@
           "last_activity": "2025-10-31"
         },
         {
-          "id": "mindmap_win_wei",
-          "title": "Win Wei - Key concepts - Daoism, effortless action, flowing with life rather than forcing things, active with ease.",
+          "id": "mindmap_wu_wei",
+          "title": "Wu Wei - Key concepts - Daoism, effortless action, flowing with life rather than forcing things, active with ease.",
           "status": "✅",
           "last_activity": "2025-11-01"
+        },
+        {
+          "id": "mindmap_the_ego_friend_frenemy",
+          "title": "The Ego - Key concepts - Freud, identity, internal editor, positive-and-negative self-talk, ego transcendence, tame, adaptive ego, survival.",
+          "status": "✅",
+          "last_activity": "2025-11-02"
         }
       ]
     }
