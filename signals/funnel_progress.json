@@ -8,7 +8,7 @@
       "steps_duration": 32,
       "steps_metric": 1.94,
       "steps_target": 3,
-      "last_activity": "2025-11-01",
+      "last_activity": "2025-11-06",
       "status": "🔥",
       "notes": "A guided walking routine to enhance cardiovascular endurance.",
       "in_control": false,
@@ -30,9 +30,9 @@
         {
           "id": "10k_steps_day",
           "title": "10,000 steps in a day",
-          "count": 19,
-          "status": "🔥",
-          "last_activity": "2025-11-01"
+          "count": 22,
+          "status": "🌋",
+          "last_activity": "2025-11-06"
         },
         {
           "id": "walk_15_min",
