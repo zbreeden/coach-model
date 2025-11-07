@@ -9,7 +9,7 @@
       "steps_metric": 1.94,
       "steps_target": 3,
       "last_activity": "2025-11-06",
-      "status": "🔥",
+      "status": "🌋",
       "notes": "A guided walking routine to enhance cardiovascular endurance.",
       "in_control": false,
       "steps": [
@@ -17,15 +17,15 @@
           "id": "walk_3_mile",
           "title": "3-mile walk",
           "count": 16,
-          "status": "🔥",
+          "status": "🌋",
           "last_activity": "2025-11-01"
         },
         {
           "id": "walk_1_mile",
           "title": "1-mile walk",
-          "count": 16,
-          "status": "🔥",
-          "last_activity": "2025-10-31"
+          "count": 18,
+          "status": "🌋",
+          "last_activity": "2025-11-06"
         },
         {
           "id": "10k_steps_day",
@@ -37,9 +37,9 @@
         {
           "id": "walk_15_min",
           "title": "15-minute walk",
-          "count": 11,
+          "count": 13,
           "status": "🌋",
-          "last_activity": "2025-11-01"
+          "last_activity": "2025-11-06"
         }
       ]
     },
