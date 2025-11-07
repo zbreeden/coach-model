@@ -4,12 +4,12 @@
     "walk_session": {
       "id": "walk_session",
       "title": "Cardio Walking Session",
-      "steps_total": 62,
-      "steps_duration": 32,
-      "steps_metric": 1.94,
+      "steps_total": 70,
+      "steps_duration": 38,
+      "steps_metric": 1.84,
       "steps_target": 3,
       "last_activity": "2025-11-06",
-      "status": "🌋",
+      "status": "🌿",
       "notes": "A guided walking routine to enhance cardiovascular endurance.",
       "in_control": false,
       "steps": [
@@ -17,7 +17,7 @@
           "id": "walk_3_mile",
           "title": "3-mile walk",
           "count": 16,
-          "status": "🌋",
+          "status": "🌿",
           "last_activity": "2025-11-01"
         },
         {
@@ -37,8 +37,8 @@
         {
           "id": "walk_15_min",
           "title": "15-minute walk",
-          "count": 13,
-          "status": "🌋",
+          "count": 14,
+          "status": "🌿",
           "last_activity": "2025-11-06"
         }
       ]
