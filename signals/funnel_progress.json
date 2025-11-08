@@ -1,552 +1,221 @@
+
 {
-  "generated_at": "2025-10-30T19:31:12Z",
-  "trainings": {
-    "walk_session": {
-      "id": "walk_session",
-      "title": "Cardio Walking Session",
-      "steps_total": 70,
-      "steps_duration": 38,
-      "steps_metric": 1.84,
-      "steps_target": 3,
-      "last_activity": "2025-11-06",
-      "status": "🌿",
-      "notes": "A guided walking routine to enhance cardiovascular endurance.",
-      "in_control": 😭,
-      "steps": [
-        {
-          "id": "walk_3_mile",
-          "title": "3-mile walk",
-          "count": 16,
-          "status": "🌿",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "walk_1_mile",
-          "title": "1-mile walk",
-          "count": 18,
-          "status": "🌋",
-          "last_activity": "2025-11-06"
-        },
-        {
-          "id": "10k_steps_day",
-          "title": "10,000 steps in a day",
-          "count": 22,
-          "status": "🌋",
-          "last_activity": "2025-11-06"
-        },
-        {
-          "id": "walk_15_min",
-          "title": "15-minute walk",
-          "count": 14,
-          "status": "🌿",
-          "last_activity": "2025-11-06"
-        }
-      ]
-    },
-    "upper_body_session": {
-      "id": "upper_body_session",
-      "title": "Upper Body Strength Session",
-      "steps_total": 52,
-      "steps_duration": 33,
-      "steps_metric": 1.58,
-      "steps_target": 3,
-      "last_activity": "2025-11-02",
-      "status": "🌋",
-      "notes": "Strength routines focusing on upper body muscles.",
-      "in_control": "😭",
-      "steps": [
-        {
-          "id": "pushups_20",
-          "title": "20 push-ups",
-          "count": 11,
-          "status": "🌿",
-          "last_activity": "2025-10-31"
-        },
-        {
-          "id": "curls_20_15lbs",
-          "title": "20 bicep curls of 15 lbs",
-          "count": 12,
-          "status": "🌋",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "tricep_pushbacks_20_15lbs",
-          "title": "20 tricep pushbacks of 15 lbs",
-          "count": 8,
-          "status": "🌿",
-          "last_activity": "2025-11-02"
-        },
-        {
-          "id": "bent_over_flies_20_15lbs",
-          "title": "20 bent-over flies of 15 lbs",
-          "count": 7,
-          "status": "🌿",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "arnold_presses_20_15lbs",
-          "title": "20 Arnold Presses of 15 lbs",
-          "count": 7,
-          "status": "🌿",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "upright_rows_20_15lbs",
-          "title": "20 upright rows of 15 lbs",
-          "count": 8,
-          "status": "🌿",
-          "last_activity": "2025-11-01"
-        }
-      ]
-    },
-    "core_session": {
-      "id": "core_session",
-      "title": "Core Body Strength Session",
-      "steps_total": 49,
-      "steps_duration": 32,
-      "steps_metric": 1.53,
-      "steps_target": 3,
-      "last_activity": "2025-11-01",
-      "status": "🌋",
-      "notes": "Exercises targeting core muscle groups for stability and strength.",
-      "in_control": false,
-      "steps": [
-        {
-          "id": "crunches_20",
-          "title": "20 crunches",
-          "count": 10,
-          "status": "🌿",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "side_plank_left_20s",
-          "title": "20 second side plank - left",
-          "count": 7,
-          "status": "🌿",
-          "last_activity": "2025-10-31"
-        },
-        {
-          "id": "side_plank_right_20s",
-          "title": "20 second side plank - right",
-          "count": 7,
-          "status": "🌿",
-          "last_activity": "2025-10-31"
-        },
-        {
-          "id": "plank_20s",
-          "title": "20 second plank",
-          "count": 8,
-          "status": "🌿",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "hip_raises_20",
-          "title": "20 hip raises",
-          "count": 7,
-          "status": "🌿",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "20_v_up_roll_ups",
-          "title": "20 V-Up-Roll-Ups",
-          "count": 4,
-          "status": "🌿",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "high_knees_100",
-          "title": "100 high knees",
-          "count": 4,
-          "status": "🌿",
-          "last_activity": "2025-10-26"
-        },
-        {
-          "id": "high_knee_twists_50",
-          "title": "50 high knee twists",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-27"
-        }
-      ]
-    },
-    "lower_body_session": {
-      "id": "lower_body_session",
-      "title": "Lower Body Strength Session",
-      "steps_total": 30,
-      "steps_duration": 32,
-      "steps_metric": 0.97,
-      "steps_target": 3,
-      "last_activity": "2025-11-01",
-      "status": "🌋",
-      "notes": "Routines designed to strengthen lower body muscles.",
-      "in_control": false,
-      "steps": [
-        {
-          "id": "squats_20",
-          "title": "20 squats",
-          "count": 7,
-          "status": "🌿",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "glute_bridges_20",
-          "title": "20 glute bridges",
-          "count": 5,
-          "status": "🌿",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "alternate_leg_step_ups_20",
-          "title": "20 alternate leg step-ups",
-          "count": 7,
-          "status": "🌿",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "calf_raises_20",
-          "title": "20 calf raises",
-          "count": 6,
-          "status": "🌿",
-          "last_activity": "2025-10-31"
-        },
-        {
-          "id": "alternate_leg_lunges_20",
-          "title": "20 alternate leg lunges",
-          "count": 5,
-          "status": "🌿",
-          "last_activity": "2025-10-30"
-        }
-      ]
-    },
-    "caloric_limiting_session": {
-      "id": "caloric_limiting_session",
-      "title": "Caloric Limiting Session",
-      "steps_total": 25,
-      "steps_duration": 32,
-      "steps_metric": 0.78,
-      "steps_target": 2,
-      "last_activity": "2025-10-31",
-      "status": "🌿",
-      "notes": "Managing daily caloric intake and output for weight control.",
-      "in_control": false,
-      "steps": [
-        {
-          "id": "load_max_2000",
-          "title": "2000 calorie day",
-          "count": 12,
-          "status": "🌿",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "output_min_450",
-          "title": "450 energy output",
-          "count": 13,
-          "status": "🌋",
-          "last_activity": "2025-10-31"
-        }
-      ]
-    },
-    "elevate_session": {
-      "id": "elevate_session",
-      "title": "Elevate Session",
-      "steps_total": 66,
-      "steps_duration": 33,
-      "steps_metric": 2.00,
-      "steps_target": 3,
-      "last_activity": "2025-11-02",
-      "status": "🔥",
-      "notes": "Elevate sessions managing mental memory, focus, and processing speed.",
-      "in_control": "😭",
-      "steps": [
-        {
-          "id": "elevate_spelling",
-          "title": "Spelling in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-21"
-        },
-        {
-          "id": "elevate_retention",
-          "title": "Retention in Elevate",
-          "count": 3,
-          "status": "🌱",
-          "last_activity": "2025-11-02"
-        },
-        {
-          "id": "elevate_tipping",
-          "title": "Tipping in Elevate",
-          "count": 3,
-          "status": "🌱",
-          "last_activity": "2025-10-27"
-        },
-        {
-          "id": "elevate_expression",
-          "title": "Expression in Elevate",
-          "count": 6,
-          "status": "🌿",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "elevate_synonyms",
-          "title": "Synonyms in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-11-02"
-        },
-        {
-          "id": "elevate_equivalence",
-          "title": "Equivalence in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-20"
-        },
-        {
-          "id": "elevate_percentages",
-          "title": "Percentages in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-13"
-        },
-        {
-          "id": "elevate_eloquence",
-          "title": "Eloquence in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-28"
-        },
-        {
-          "id": "elevate_name_recall",
-          "title": "Name Recall in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-27"
-        },
-        {
-          "id": "elevate_division",
-          "title": "Division in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "elevate_attention",
-          "title": "Attention in Elevate",
-          "count": 3,
-          "status": "🌱",
-          "last_activity": "2025-10-29"
-        },
-        {
-          "id": "elevate_detail",
-          "title": "Detail in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-18"
-        },
-        {
-          "id": "elevate_agility",
-          "title": "Agility in Elevate",
-          "count": 3,
-          "status": "🌱",
-          "last_activity": "2025-10-28"
-        },
-        {
-          "id": "elevate_word_swap",
-          "title": "Word Swap in Elevate",
-          "count": 3,
-          "status": "🌱",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "elevate_brevity",
-          "title": "Brevity in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-15"
-        },
-        {
-          "id": "elevate_diction",
-          "title": "Diction in Elevate",
-          "count": 5,
-          "status": "🌿",
-          "last_activity": "2025-10-26"
-        },
-        {
-          "id": "elevate_association",
-          "title": "Association in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-17"
-        },
-        {
-          "id": "elevate_transitions",
-          "title": "Transitions in Elevate",
-          "count": 4,
-          "status": "🌱",
-          "last_activity": "2025-10-29"
-        },
-        {
-          "id": "elevate_visualizations",
-          "title": "Visualizations in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-10-31"
-        },
-        {
-          "id": "elevate_inversion",
-          "title": "Inversion in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-20"
-        },
-        {
-          "id": "elevate_clarity",
-          "title": "Clarity in Elevate",
-          "count": 3,
-          "status": "🌱",
-          "last_activity": "2025-10-31"
-        },
-        {
-          "id": "elevate_processing",
-          "title": "Processing in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-21"
-        },
-        {
-          "id": "elevate_extraction",
-          "title": "Extraction in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-22"
-        },
-        {
-          "id": "elevate_estimation",
-          "title": "Estimation in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-23"
-        },
-        {
-          "id": "elevate_subtraction",
-          "title": "Subtraction in Elevate",
-          "count": 2,
-          "status": "🌱",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "elevate_word_parts",
-          "title": "Word Parts in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-25"
-        },
-        {
-          "id": "elevate_purchasing",
-          "title": "Purchasing in Elevate",
-          "count": 3,
-          "status": "🌱",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "elevate_connotation",
-          "title": "Connotation in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-26"
-        },
-        {
-          "id": "elevate_comprehension",
-          "title": "Comprehension in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-10-29"
-        },
-        {
-          "id": "elevate_sequencing",
-          "title": "Sequencing in Elevate",
-          "count": 1,
-          "status": "🌱",
-          "last_activity": "2025-11-01"
-        }
-      ]
-    },
-    "headspace_session": {
-      "id": "headspace_session",
-      "title": "Headspace Session",
-      "steps_total": 11,
-      "steps_duration": 33,
-      "steps_metric": 0.33,
-      "steps_target": 2,
-      "last_activity": "2025-11-02",
-      "status": "🌿",
-      "notes": "Headspace and personal meditation sessions managing mindfulness and emotional intelligence.",
-      "in_control": "😭",
-      "steps": [
-        {
-          "id": "headspace_15min",
-          "title": "15-minute guided meditation in Headspace",
-          "count": 9,
-          "status": "🌿",
-          "last_activity": "2025-11-02"
-        },
-        {
-          "id": "personal_space_15min",
-          "title": "15-minute personal meditation",
-          "count": 2,
-          "status": "❄️",
-          "last_activity": "2025-10-28"
-        }
-      ]
-    },
-    "mindmap_session": {
-      "id": "mindmap_session",
-      "title": "Mind Map Session",
-      "steps_total": 6,
-      "steps_duration": 33,
-      "steps_metric": 0.18,
-      "steps_target": 1,
-      "last_activity": "2025-11-02",
-      "status": "🌿",
-      "notes": "Mind mapping exercises to enhance general knowledge and understanding.",
-      "in_control": "😭",
-      "steps": [
-        {
-          "id": "mindmap_philosophy_of_confidence",
-          "title": "Philosophy of Confidence - Key concepts - fake it till you make it, power poses, visualization.",
-          "status": "✅",
-          "last_activity": "2025-10-28"
-        },
-        {
-          "id": "mindmap_theories_of_personality",
-          "title": "Theories of Personality - Key concepts - psychoanalytic, humanistic, trait, social-cognitive",
-          "status": "✅",
-          "last_activity": "2025-10-29"
-        },
-        {
-          "id": "mindmap_aristotle",
-          "title": "Aristotle - Key concepts - logic, metaphysics, ethics, politics, legacy.",
-          "status": "✅",
-          "last_activity": "2025-10-30"
-        },
-        {
-          "id": "mindmap_eugenie_delacroix",
-          "title": "Eugene Delacroix - Key concepts - French Romantic artist, dramatic scenes, vibrant colors, Liberty Leading The People.",
-          "status": "✅",
-          "last_activity": "2025-10-31"
-        },
-        {
-          "id": "mindmap_wu_wei",
-          "title": "Wu Wei - Key concepts - Daoism, effortless action, flowing with life rather than forcing things, active with ease.",
-          "status": "✅",
-          "last_activity": "2025-11-01"
-        },
-        {
-          "id": "mindmap_the_ego_friend_frenemy",
-          "title": "The Ego - Key concepts - Freud, identity, internal editor, positive-and-negative self-talk, ego transcendence, tame, adaptive ego, survival.",
-          "status": "✅",
-          "last_activity": "2025-11-02"
-        }
-      ]
-    }
-  }
+	"generated_at": "2025-11-08T12:00:00Z",
+	"skills": [
+		{
+			"skill_track_code": "SK-CARDIO",
+			"skill_track_name": "Cardio Health",
+			"skill_track_description": "Maintains and improves cardiovascular fitness through regular aerobic exercise.",
+			"skill_is_completed": "🔄",
+			"skill_status": "🟢",
+			"skill_track_last_update_date": "2025-11-08",
+			"coachings": {
+				"walk_session": {
+					"id": "walk_session",
+					"title": "Cardio Walking Session",
+					"steps_total": 62,
+					"steps_duration": 32,
+					"steps_metric": 1.94,
+					"steps_target": 3,
+					"last_activity": "2025-11-01",
+					"status": "🔥",
+					"notes": "A guided walking routine to enhance cardiovascular endurance.",
+					"in_control": false,
+					"steps": [
+						{
+							"id": "walk_3_mile",
+							"title": "3-mile walk",
+							"count": 16,
+							"status": "🔥",
+							"last_activity": "2025-11-01"
+						},
+						{
+							"id": "walk_1_mile",
+							"title": "1-mile walk",
+							"count": 16,
+							"status": "🔥",
+							"last_activity": "2025-10-31"
+						},
+						{
+							"id": "10k_steps_day",
+							"title": "10,000 steps in a day",
+							"count": 19,
+							"status": "🔥",
+							"last_activity": "2025-11-01"
+						},
+						{
+							"id": "walk_15_min",
+							"title": "15-minute walk",
+							"count": 11,
+							"status": "🌋",
+							"last_activity": "2025-11-01"
+						}
+					]
+				}
+			}
+		},
+		{
+			"skill_track_code": "SK-STRENGTH",
+			"skill_track_name": "Strength Training",
+			"skill_track_description": "Builds muscle strength and endurance through resistance exercises.",
+			"skill_is_completed": "🔄",
+			"skill_status": "🟢",
+			"skill_track_last_update_date": "2025-11-08",
+			"coachings": {
+				"upper_body_session": {
+					"id": "upper_body_session",
+					"title": "Upper Body Strength Session",
+					"steps_total": 52,
+					"steps_duration": 33,
+					"steps_metric": 1.58,
+					"steps_target": 3,
+					"last_activity": "2025-11-02",
+					"status": "🌋",
+					"notes": "Strength routines focusing on upper body muscles.",
+					"in_control": "😭",
+					"steps": [
+						{ "id": "pushups_20", "title": "20 push-ups", "count": 11, "status": "🌿", "last_activity": "2025-10-31" },
+						{ "id": "curls_20_15lbs", "title": "20 bicep curls of 15 lbs", "count": 12, "status": "🌋", "last_activity": "2025-11-01" },
+						{ "id": "tricep_pushbacks_20_15lbs", "title": "20 tricep pushbacks of 15 lbs", "count": 8, "status": "🌿", "last_activity": "2025-11-02" },
+						{ "id": "bent_over_flies_20_15lbs", "title": "20 bent-over flies of 15 lbs", "count": 7, "status": "🌿", "last_activity": "2025-11-01" },
+						{ "id": "arnold_presses_20_15lbs", "title": "20 Arnold Presses of 15 lbs", "count": 7, "status": "🌿", "last_activity": "2025-10-30" },
+						{ "id": "upright_rows_20_15lbs", "title": "20 upright rows of 15 lbs", "count": 8, "status": "🌿", "last_activity": "2025-11-01" }
+					]
+				},
+				"core_session": {
+					"id": "core_session",
+					"title": "Core Body Strength Session",
+					"steps_total": 49,
+					"steps_duration": 32,
+					"steps_metric": 1.53,
+					"steps_target": 3,
+					"last_activity": "2025-11-01",
+					"status": "🌋",
+					"notes": "Exercises targeting core muscle groups for stability and strength.",
+					"in_control": false,
+					"steps": [
+						{ "id": "crunches_20", "title": "20 crunches", "count": 10, "status": "🌿", "last_activity": "2025-11-01" },
+						{ "id": "side_plank_left_20s", "title": "20 second side plank - left", "count": 7, "status": "🌿", "last_activity": "2025-10-31" },
+						{ "id": "side_plank_right_20s", "title": "20 second side plank - right", "count": 7, "status": "🌿", "last_activity": "2025-10-31" },
+						{ "id": "plank_20s", "title": "20 second plank", "count": 8, "status": "🌿", "last_activity": "2025-10-30" },
+						{ "id": "hip_raises_20", "title": "20 hip raises", "count": 7, "status": "🌿", "last_activity": "2025-11-01" },
+						{ "id": "20_v_up_roll_ups", "title": "20 V-Up-Roll-Ups", "count": 4, "status": "🌿", "last_activity": "2025-10-30" },
+						{ "id": "high_knees_100", "title": "100 high knees", "count": 4, "status": "🌿", "last_activity": "2025-10-26" },
+						{ "id": "high_knee_twists_50", "title": "50 high knee twists", "count": 2, "status": "🌱", "last_activity": "2025-10-27" }
+					]
+				},
+				"lower_body_session": {
+					"id": "lower_body_session",
+					"title": "Lower Body Strength Session",
+					"steps_total": 30,
+					"steps_duration": 32,
+					"steps_metric": 0.97,
+					"steps_target": 3,
+					"last_activity": "2025-11-01",
+					"status": "🌋",
+					"notes": "Routines designed to strengthen lower body muscles.",
+					"in_control": false,
+					"steps": [
+						{ "id": "squats_20", "title": "20 squats", "count": 7, "status": "🌿", "last_activity": "2025-11-01" },
+						{ "id": "glute_bridges_20", "title": "20 glute bridges", "count": 5, "status": "🌿", "last_activity": "2025-11-01" },
+						{ "id": "alternate_leg_step_ups_20", "title": "20 alternate leg step-ups", "count": 7, "status": "🌿", "last_activity": "2025-10-30" },
+						{ "id": "calf_raises_20", "title": "20 calf raises", "count": 6, "status": "🌿", "last_activity": "2025-10-31" },
+						{ "id": "alternate_leg_lunges_20", "title": "20 alternate leg lunges", "count": 5, "status": "🌿", "last_activity": "2025-10-30" }
+					]
+				}
+			}
+		},
+		{
+			"skill_track_code": "SK-NUTRITION",
+			"skill_track_name": "Nutritional Health",
+			"skill_track_description": "Attempts to maintain a balanced caloric intake and improved nutritional habits.",
+			"skill_is_completed": "🔄",
+			"skill_status": "🟢",
+			"skill_track_last_update_date": "2025-11-06",
+			"coachings": {
+				"caloric_limiting_session": {
+					"id": "caloric_limiting_session",
+					"title": "Caloric Limiting Session",
+					"steps_total": 25,
+					"steps_duration": 32,
+					"steps_metric": 0.78,
+					"steps_target": 2,
+					"last_activity": "2025-10-31",
+					"status": "🌿",
+					"notes": "Managing daily caloric intake and output for weight control.",
+					"in_control": false,
+					"steps": [
+						{ "id": "load_max_2000", "title": "2000 calorie day", "count": 12, "status": "🌿", "last_activity": "2025-10-30" },
+						{ "id": "output_min_450", "title": "450 energy output", "count": 13, "status": "🌋", "last_activity": "2025-10-31" }
+					]
+				}
+			}
+		},
+		{
+			"skill_track_code": "SK-MENTAL",
+			"skill_track_name": "Mental Health",
+			"skill_track_description": "Focuses on stress management, mindfulness, and emotional well-being.",
+			"skill_is_completed": "🔄",
+			"skill_status": "🟢",
+			"skill_track_last_update_date": "2025-11-07",
+			"coachings": {
+				"elevate_session": {
+					"id": "elevate_session",
+					"title": "Elevate Session",
+					"steps_total": 66,
+					"steps_duration": 33,
+					"steps_metric": 2.00,
+					"steps_target": 3,
+					"last_activity": "2025-11-02",
+					"status": "🔥",
+					"notes": "Elevate sessions managing mental memory, focus, and processing speed.",
+					"in_control": "😭",
+					"steps": [
+						{ "id": "elevate_spelling", "title": "Spelling in Elevate", "count": 2, "status": "🌱", "last_activity": "2025-10-21" },
+						{ "id": "elevate_retention", "title": "Retention in Elevate", "count": 3, "status": "🌱", "last_activity": "2025-11-02" },
+						{ "id": "elevate_tipping", "title": "Tipping in Elevate", "count": 3, "status": "🌱", "last_activity": "2025-10-27" },
+						{ "id": "elevate_expression", "title": "Expression in Elevate", "count": 6, "status": "🌿", "last_activity": "2025-10-30" },
+						{ "id": "elevate_synonyms", "title": "Synonyms in Elevate", "count": 2, "status": "🌱", "last_activity": "2025-11-02" },
+						{ "id": "elevate_equivalence", "title": "Equivalence in Elevate", "count": 2, "status": "🌱", "last_activity": "2025-10-20" }
+					]
+				},
+				"headspace_session": {
+					"id": "headspace_session",
+					"title": "Headspace Session",
+					"steps_total": 11,
+					"steps_duration": 33,
+					"steps_metric": 0.33,
+					"steps_target": 2,
+					"last_activity": "2025-11-02",
+					"status": "🌿",
+					"notes": "Headspace and personal meditation sessions managing mindfulness and emotional intelligence.",
+					"in_control": "😭",
+					"steps": [
+						{ "id": "headspace_15min", "title": "15-minute guided meditation in Headspace", "count": 9, "status": "🌿", "last_activity": "2025-11-02" },
+						{ "id": "personal_space_15min", "title": "15-minute personal meditation", "count": 2, "status": "❄️", "last_activity": "2025-10-28" }
+					]
+				},
+				"mindmap_session": {
+					"id": "mindmap_session",
+					"title": "Mind Map Session",
+					"steps_total": 6,
+					"steps_duration": 33,
+					"steps_metric": 0.18,
+					"steps_target": 1,
+					"last_activity": "2025-11-02",
+					"status": "🌿",
+					"notes": "Mind mapping exercises to enhance general knowledge and understanding.",
+					"in_control": "😭",
+					"steps": [
+						{ "id": "mindmap_philosophy_of_confidence", "title": "Philosophy of Confidence - Key concepts - fake it till you make it, power poses, visualization.", "status": "✅", "last_activity": "2025-10-28" },
+						{ "id": "mindmap_theories_of_personality", "title": "Theories of Personality - Key concepts - psychoanalytic, humanistic, trait, social-cognitive", "status": "✅", "last_activity": "2025-10-29" },
+						{ "id": "mindmap_aristotle", "title": "Aristotle - Key concepts - logic, metaphysics, ethics, politics, legacy.", "status": "✅", "last_activity": "2025-10-30" },
+						{ "id": "mindmap_eugenie_delacroix", "title": "Eugene Delacroix - Key concepts - French Romantic artist, dramatic scenes, vibrant colors, Liberty Leading The People.", "status": "✅", "last_activity": "2025-10-31" },
+						{ "id": "mindmap_wu_wei", "title": "Wu Wei - Key concepts - Daoism, effortless action, flowing with life rather than forcing things, active with ease.", "status": "✅", "last_activity": "2025-11-01" },
+						{ "id": "mindmap_the_ego_friend_frenemy", "title": "The Ego - Key concepts - Freud, identity, internal editor, positive-and-negative self-talk, ego transcendence, tame, adaptive ego, survival.", "status": "✅", "last_activity": "2025-11-02" }
+					]
+				}
+			}
+		}
+	]
 }
