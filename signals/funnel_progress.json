@@ -65,21 +65,22 @@
 				"upper_body_session": {
 					"id": "upper_body_session",
 					"title": "Upper Body Strength Session",
-					"steps_total": 52,
-					"steps_duration": 33,
-					"steps_metric": 1.58,
+					"steps_total": 60,
+					"steps_duration": 39,
+					"steps_metric": 1.54,
 					"steps_target": 3,
-					"last_activity": "2025-11-02",
-					"status": "🌋",
+					"last_activity": "2025-11-08",
+					"status": "🌿",
 					"notes": "Strength routines focusing on upper body muscles.",
 					"in_control": "😭",
 					"steps": [
-						{ "id": "pushups_20", "title": "20 push-ups", "count": 11, "status": "🌿", "last_activity": "2025-10-31" },
-						{ "id": "curls_20_15lbs", "title": "20 bicep curls of 15 lbs", "count": 12, "status": "🌋", "last_activity": "2025-11-01" },
+						{ "id": "pushups_20", "title": "20 push-ups", "count": 12, "status": "🌿", "last_activity": "2025-11-06" },
+						{ "id": "curls_20_15lbs", "title": "20 bicep curls of 15 lbs", "count": 14, "status": "🌿", "last_activity": "2025-11-08" },
 						{ "id": "tricep_pushbacks_20_15lbs", "title": "20 tricep pushbacks of 15 lbs", "count": 8, "status": "🌿", "last_activity": "2025-11-02" },
-						{ "id": "bent_over_flies_20_15lbs", "title": "20 bent-over flies of 15 lbs", "count": 7, "status": "🌿", "last_activity": "2025-11-01" },
-						{ "id": "arnold_presses_20_15lbs", "title": "20 Arnold Presses of 15 lbs", "count": 7, "status": "🌿", "last_activity": "2025-10-30" },
-						{ "id": "upright_rows_20_15lbs", "title": "20 upright rows of 15 lbs", "count": 8, "status": "🌿", "last_activity": "2025-11-01" }
+						{ "id": "bent_over_flies_20_15lbs", "title": "20 bent-over flies of 15 lbs", "count": 8, "status": "🌿", "last_activity": "2025-11-08" },
+						{ "id": "arnold_presses_20_15lbs", "title": "20 Arnold Presses of 15 lbs", "count": 8, "status": "🌿", "last_activity": "2025-11-07" },
+						{ "id": "upright_rows_20_15lbs", "title": "20 upright rows of 15 lbs", "count": 9, "status": "🌿", "last_activity": "2025-11-06" },
+						{ "id": "lateral_raises_20_15lbs", "title": "20 lateral raises of 15 lbs", "count": 1, "status": "🌱", "last_activity": "2025-11-08" }
 					]
 				},
 				"core_session": {
