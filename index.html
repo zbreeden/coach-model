@@ -1,43 +1,146 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coach Model - FourTwenty Analytics</title>
-  <meta name="description" content="The Coach is the kick in the ass">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💪</text></svg>">
-  <!-- Markdown renderer + sanitizer (used by README section) -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
-    <style>
-    .cta { display:inline-block; margin-top:.75rem; padding:.6rem 1rem; border-radius:8px;
-           background:#0f4c81; color:#fff; text-decoration:none; font-weight:600 }
-    .cta:hover { filter:brightness(1.05) }
-    .subtle { color:#666; font-size:.95rem }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>💪 Coach Model</h1>
-    <!-- Minimal model setup: a single development button and README toggle -->
-    <p>
-      <button id="model-btn" class="cta" type="button">Model in Development</button>
-      <!-- Header toggle: shows the model's small README stored in data/external (fraud.md) -->
-      <button id="readme-external-toggle" type="button" aria-expanded="false" style="margin-left:.5rem; padding:.45rem .75rem; border-radius:6px; border:1px solid #ccc; background:#fff; cursor:pointer;">Show Model README</button>
-    </p>
-    <div id="readme-external-container" style="margin-top:0.75rem; display:none; background:#fff; padding:0.75rem; border-radius:6px; border:1px solid #eee; max-height:60vh; overflow:auto;"></div>
-  </header>
-  
-  <main>
-    <section>
-      <h2>🌌 Constellation Info</h2>
-      <ul>
-        <li><strong>Orbit</strong>: 🧪</li>
-        <li><strong>Status</strong>: 🔥</li>  
-        <li><strong>Module Key</strong>: <code>coach_model</code></li>
-      </ul>
-    </section>
+        try {
+          const resp = await fetch('./signals/funnel_progress.json');
+          if (!resp.ok) throw new Error('Progress data not available');
+          const doc = await resp.json();
 
+          const skills = Array.isArray(doc.skills) ? doc.skills : [];
+          if (skills.length === 0) {
+            progressContainer.innerHTML = '<p style="color:#666;"><em>No progress data found.</em></p>';
+            progressLoaded = true;
+            return;
+          }
+
+          // Outer container that groups skills
+          const outer = document.createElement('div');
+          outer.style.display = 'grid';
+          outer.style.gap = '1rem';
+
+          skills.forEach(skill => {
+            // Skill header
+            const skillHeader = document.createElement('h3');
+            skillHeader.style.margin = '0 0 0.5rem 0';
+            skillHeader.textContent = skill.skill_track_name || skill.skill_track_code || 'Skill';
+
+            // Grid of coaching cards for this skill
+            const skillGrid = document.createElement('div');
+            skillGrid.style.display = 'grid';
+            skillGrid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
+            skillGrid.style.gap = '0.75rem';
+
+            const coachings = skill.coachings || {};
+            Object.keys(coachings).forEach(cid => {
+              const t = coachings[cid];
+              const card = document.createElement('div');
+              card.style.border = '1px solid #e3e3e3';
+              card.style.padding = '0.75rem';
+              card.style.borderRadius = '8px';
+              card.style.background = '#fff';
+
+              // Title (coaching title only)
+              const title = document.createElement('h4');
+              title.style.margin = '0 0 0.25rem 0';
+              title.textContent = t.title || cid;
+              card.appendChild(title);
+
+              // Target line (bold)
+              const targetLine = document.createElement('div');
+              targetLine.style.fontWeight = '700';
+              targetLine.style.marginBottom = '0.25rem';
+              const targetVal = (typeof t.steps_target === 'number' || (typeof t.steps_target === 'string' && String(t.steps_target).trim() !== '')) ? String(t.steps_target) : '—';
+              targetLine.textContent = `${targetVal} per day`;
+              card.appendChild(targetLine);
+
+              // Small meta lines: metric and in_control
+              const metaWrap = document.createElement('div');
+              metaWrap.style.fontSize = '0.85rem';
+              metaWrap.style.color = '#666';
+              metaWrap.style.marginBottom = '0.35rem';
+              metaWrap.textContent = `Metric: ${typeof t.steps_metric !== 'undefined' ? t.steps_metric : '—'} · In control: ${typeof t.in_control !== 'undefined' ? String(t.in_control) : '—'}`;
+              card.appendChild(metaWrap);
+
+              // Last activity
+              const lastLine = document.createElement('div');
+              lastLine.style.fontSize = '0.85rem';
+              lastLine.style.color = '#666';
+              lastLine.style.marginBottom = '0.5rem';
+              lastLine.textContent = `Last: ${t.last_activity || '—'}`;
+              card.appendChild(lastLine);
+
+              // Progress bar (compute percent from step counts vs steps_total when available)
+              let totalCount = 0;
+              if (Array.isArray(t.steps)) totalCount = t.steps.reduce((acc, s) => acc + (s.count || 0), 0);
+              let percent = 0;
+              if (typeof t.steps_total === 'number' && t.steps_total > 0) {
+                percent = Math.min(100, Math.round((totalCount / t.steps_total) * 100));
+              } else {
+                // fallback: if steps length equals steps_total-like value, derive a simple percent
+                percent = t.steps && t.steps.length ? Math.min(100, Math.round((totalCount / (t.steps.length * 1 || 1)) * 100)) : 0;
+              }
+              const barOuter = document.createElement('div');
+              barOuter.style.background = '#f1f5f9';
+              barOuter.style.borderRadius = '6px';
+              barOuter.style.height = '10px';
+              barOuter.style.overflow = 'hidden';
+              barOuter.style.marginBottom = '0.5rem';
+              const barInner = document.createElement('div');
+              barInner.style.width = `${percent}%`;
+              barInner.style.height = '100%';
+              barInner.style.background = '#0f4c81';
+              barInner.setAttribute('aria-valuenow', String(percent));
+              barInner.setAttribute('role', 'progressbar');
+              barOuter.appendChild(barInner);
+              card.appendChild(barOuter);
+
+              // Steps list
+              if (Array.isArray(t.steps) && t.steps.length) {
+                const stepsWrap = document.createElement('ul');
+                stepsWrap.style.listStyle = 'none';
+                stepsWrap.style.padding = '0';
+                stepsWrap.style.margin = '0';
+                stepsWrap.style.display = 'grid';
+                stepsWrap.style.gap = '0.5rem';
+                t.steps.forEach(s => {
+                  const li = document.createElement('li');
+                  li.style.display = 'flex';
+                  li.style.justifyContent = 'space-between';
+                  li.style.alignItems = 'center';
+
+                  const left = document.createElement('div');
+                  left.style.display = 'flex';
+                  left.style.alignItems = 'center';
+
+                  const done = (s.status === '✅') || (!!s.count && s.count > 0);
+                  const symbol = document.createElement('span');
+                  symbol.style.display = 'inline-block';
+                  symbol.style.width = '1.2rem';
+                  symbol.style.marginRight = '0.5rem';
+                  symbol.textContent = done ? '✅' : '❌';
+
+                  const stepTitle = document.createElement('div');
+                  stepTitle.innerHTML = `<strong style="font-weight:600">${s.title || s.id}</strong><div style="font-size:0.85rem;color:#666">${s.last_activity ? `Last: ${s.last_activity}` : ''}${typeof s.count !== 'undefined' ? ` · ${s.count}` : ''}</div>`;
+
+                  left.appendChild(symbol);
+                  left.appendChild(stepTitle);
+                  li.appendChild(left);
+
+                  stepsWrap.appendChild(li);
+                });
+                card.appendChild(stepsWrap);
+              }
+
+              skillGrid.appendChild(card);
+            });
+
+            outer.appendChild(skillHeader);
+            outer.appendChild(skillGrid);
+          });
+
+          progressContainer.innerHTML = '';
+          progressContainer.appendChild(outer);
+          progressLoaded = true;
+        } catch (err) {
+          progressContainer.innerHTML = `<p style="color:#b00;"><em>Unable to load progress: ${err.message}</em></p>`;
+        }
     <section>
       <h2>📡 Latest Signal</h2>
       <div id="signal-container">
