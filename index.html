@@ -1,17 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Protector • Signals & Progress</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coach Model - FourTwenty Analytics</title>
+  <meta name="description" content="The Coach is the kick in the arse.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💪</text></svg>">
+  <!-- Markdown renderer + sanitizer (used by README section) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
   <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
   <main class="wrap">
     <header>
-      <h1>Protector Dashboard</h1>
-      <p class="meta">Signals, archive, and workflow progress.</p>
+      <h1>💪 The Coach</h1>
+      <p class="meta">The Coach is the kick in the arse.</p>
     </header>
+
+        <section>
+      <h2>🌌 Constellation Info</h2>
+      <ul>
+        <li><strong>Orbit</strong>: 🧪</li>
+        <li><strong>Status</strong>: 🔥</li>  
+        <li><strong>Module Key</strong>: <code>coach_model</code></li>
+      </ul>
+    </section>
 
     <section>
       <h2>📡 Latest Signal</h2>
@@ -29,7 +43,6 @@
       <div style="margin-top:.5rem">
         <button id="progress-toggle" class="btn" aria-expanded="false">Show progress</button>
       </div>
-      <!-- Keep the container & placement identical so the rest of the UI remains untouched -->
       <div id="progress-container" class="hidden" style="margin-top:1rem"></div>
     </section>
 
